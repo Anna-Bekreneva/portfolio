@@ -1,0 +1,34 @@
+.works {
+    background-color: #c7b7;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item {
+    width: 100%;
+}
+
+.item:not(:last-child) {
+    margin-right: 24px;
+}
+
+@media(max-width: 992px) {
+    .item {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .items {
+        flex-direction: column;
+    }
+
+    .item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

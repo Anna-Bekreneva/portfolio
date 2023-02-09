@@ -1,0 +1,17 @@
+.items {
+    display: flex;
+}
+
+.item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.link {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center;
+    background-color: #c5c0c5;
+}

@@ -1,0 +1,34 @@
+.footer {
+    background-color: #e9fde3;
+    padding: 50px 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box > *:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    transition: box-shadow 0.4s;
+    border-radius: 4px;
+}
+
+.subtitle:hover {
+    box-shadow: 0 0 0 2px #000000;
+}
+
+@media(max-width: 480px) {
+    .footer {
+        padding: 40px 0;
+    }
+
+    .box > *:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}

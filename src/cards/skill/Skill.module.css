@@ -1,0 +1,13 @@
+.skill {
+    padding: 20px;
+    background-color: #dce9d7;
+    height: 100%;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ccd8c8;
+    margin-bottom: 12px;
+}
+

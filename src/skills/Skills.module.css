@@ -1,0 +1,33 @@
+.skills {
+    background-color: #dbfce8;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    width: 100%;
+}
+
+.item:not(:last-child) {
+    margin-right: 24px;
+}
+
+@media(max-width: 992px) {
+    .item:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .items {
+        flex-direction: column;
+    }
+
+    .item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
