@@ -1,9 +1,5 @@
 import React from "react";
-import {Header} from "./layout";
-import {Hero} from "./layout/hero";
-import {Skills} from "./layout/skills";
-import {Works} from "./layout/works";
-
+import {Header, Hero, Promo, Skills, Works} from "./layout";
 
 
 function App() {
@@ -14,6 +10,7 @@ function App() {
                 <Hero/>
                 <Skills/>
                 <Works/>
+                <Promo/>
             </main>
         </div>
     );
