@@ -1,7 +1,7 @@
 import {FC} from "react";
 import sprite from '../../../assets/images/sprite.svg'
 
-type IconProps = {
+export type IconProps = {
     id: string
     width?: string
     height?: string

@@ -1,6 +1,8 @@
 import React from "react";
 import {Header} from "./layout";
 import {Hero} from "./layout/hero";
+import {Skills} from "./layout/skills";
+
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
             <Header/>
             <main>
                 <Hero/>
+                <Skills/>
             </main>
         </div>
     );
