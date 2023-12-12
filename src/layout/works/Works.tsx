@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper, StyledTitle} from "../../components";
-import {Work} from "../../components/work";
+import {FlexWrapper, StyledTitle, Work} from "../../components";
 import social from '../../assets/images/works/social.jpg'
 import socialWebp from '../../assets/images/works/social.webp'
 import counter from '../../assets/images/works/counter.jpg'
