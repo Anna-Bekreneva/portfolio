@@ -1,5 +1,5 @@
 import React from "react";
-import {Header, Hero, Promo, Skills, Works, Education, Footer} from "./layout";
+import {Header, Hero, Promo, Skills, Works, Education, Footer, Contacts} from "./layout";
 
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
                 <Works/>
                 <Promo/>
                 <Education/>
+                <Contacts/>
             </main>
             <Footer/>
         </div>
