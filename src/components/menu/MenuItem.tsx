@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import styled from "styled-components";
-import {FlexWrapperProps} from "../common/FlexWrapper";
+import {FlexWrapperProps} from "../common/flexWrapper/FlexWrapper";
 export const MenuItem: FC<MenuItemProps> = ({ href, children}) => {
     return (
         <StyledMenuItem>

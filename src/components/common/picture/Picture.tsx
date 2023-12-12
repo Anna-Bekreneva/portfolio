@@ -1,0 +1,21 @@
+import {ComponentProps, FC} from "react";
+import styled from "styled-components";
+
+type PictureProps = {
+    lazy?: boolean
+    srcSet: string
+} & ComponentProps<'img'>
+
+export const Picture: FC<PictureProps> = ({ lazy, srcSet,   ...props }) => {
+    return (
+        <StyledPicture>
+            <source srcSet={srcSet} type="image/webp"/>
+            <img loading={lazy ? 'lazy' : 'eager'} {...props}/>
+        </StyledPicture>
+    )
+}
+
+const StyledPicture = styled.picture`
+img {
+  object-fit: cover;
+}`

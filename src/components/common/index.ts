@@ -1,3 +1,4 @@
-export * from './FlexWrapper'
-export * from './SrOnly'
-export * from './Icon'
+export * from './flexWrapper'
+export * from './srOnly'
+export * from './icon'
+export * from './title'
