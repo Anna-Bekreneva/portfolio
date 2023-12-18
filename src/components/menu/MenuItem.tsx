@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import styled from "styled-components";
-import {FlexWrapperProps} from "../common/flexWrapper/FlexWrapper";
+import {FlexWrapperProps} from "../common";
+import {theme} from "../../styles";
 export const MenuItem: FC<MenuItemProps> = ({ href, children}) => {
     return (
         <StyledMenuItem>
@@ -9,12 +10,11 @@ export const MenuItem: FC<MenuItemProps> = ({ href, children}) => {
     )
 }
 
-const StyledMenuItem = styled.li``
+const StyledMenuItem = styled.li`
+  font-weight: 600;
+  color: ${theme.colors.blue500};
+`
 const StyledMenuLink = styled.a``
-
-type MenuProps = {
-    children: React.ReactNode
-} & FlexWrapperProps
 
 type MenuItemProps = {
     href: string

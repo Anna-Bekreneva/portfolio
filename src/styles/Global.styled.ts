@@ -17,6 +17,7 @@ export function fontFace(fontFamily: string, url: string, weight: number ){
 export const GlobalStyles = createGlobalStyle`
   ${fontFace('Montserrat', 'Montserrat-Regular', 400)}
   ${fontFace('Montserrat', 'Montserrat-Medium', 500)}
+  ${fontFace('Montserrat', 'Montserrat-SemiBold', 600)}
   ${fontFace('Ubuntu', 'Ubuntu-Medium', 500)}
   
   html {
