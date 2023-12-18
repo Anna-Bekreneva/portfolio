@@ -1,4 +1,4 @@
-import {Icon, StyledSrOnly} from "../common";
+import {Icon} from "../common";
 import styled from "styled-components";
 import {FC} from "react";
 
