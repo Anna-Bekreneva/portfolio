@@ -8,7 +8,7 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   justify-content: ${props => props.justify || 'flex-start' };
 `
 
-export type FlexWrapperProps = {
+type FlexWrapperProps = {
     direction?: string
     gap?: string
     align?: string

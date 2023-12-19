@@ -15,10 +15,10 @@ export function fontFace(fontFamily: string, url: string, weight: number ){
 }
 
 export const GlobalStyles = createGlobalStyle`
-  ${fontFace('Montserrat', 'Montserrat-Regular', 400)}
-  ${fontFace('Montserrat', 'Montserrat-Medium', 500)}
-  ${fontFace('Montserrat', 'Montserrat-SemiBold', 600)}
-  ${fontFace('Ubuntu', 'Ubuntu-Medium', 500)}
+  ${fontFace('Inter', 'Inter-Regular', 400)}
+  ${fontFace('Inter', 'Inter-Medium', 500)}
+  ${fontFace('Inter', 'Inter-SemiBold', 600)}
+  ${fontFace('Inter', 'Inter-Bold', 700)}
   
   html {
     box-sizing: border-box;
@@ -127,9 +127,9 @@ export const GlobalStyles = createGlobalStyle`
   body {
     color: ${theme.colors.dark900};
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     // Посмотреть видео про шрифты от Светы и дополнить это свойство
-    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-family: 'Inter', 'Roboto', sans-serif;
     line-height: 1.4;
     background-color: ${theme.colors.white};
   }

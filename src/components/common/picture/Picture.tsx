@@ -15,7 +15,7 @@ export const Picture: FC<PictureProps> = ({ lazy, srcSet,   ...props }) => {
     )
 }
 
-const StyledPicture = styled.picture`
+export const StyledPicture = styled.picture`
 img {
   object-fit: cover;
 }`

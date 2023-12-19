@@ -13,7 +13,7 @@ export const Header = () => {
                         <MenuItem href={'#'}>Portfolio</MenuItem>
                         <MenuItem href={'#'}>Contacts</MenuItem>
                     </FlexWrapper>
-                    <FlexWrapper as={'ul'}>
+                    <FlexWrapper as={'ul'} align={'center'}>
                         <SocialItem id={'gitIcon'} ariaLabel={'gitHub'} href={'#'}/>
                         <SocialItem id={'telegramIcon'} ariaLabel={'Telegram'} href={'#'}/>
                         <SocialItem id={'linkedinIcon'} ariaLabel={'Linkedin'} href={'#'}/>
@@ -25,7 +25,7 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
-  background-color: ${theme.colors.orange100};
+  background-color: ${theme.colors.orange50};
   padding-top: 16px;
   padding-bottom: 16px;
 `
