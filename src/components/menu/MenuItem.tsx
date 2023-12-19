@@ -11,7 +11,7 @@ export const MenuItem: FC<MenuItemProps> = ({ href, children}) => {
 
 const StyledMenuItem = styled.li`
   font-weight: 500;
-  color: ${theme.colors.dark900};
+  color: ${theme.colors.blue500};
 `
 const StyledMenuLink = styled.a``
 

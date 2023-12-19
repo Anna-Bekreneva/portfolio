@@ -10,12 +10,12 @@ export const Hero = () => {
             <Container>
                 <FlexWrapper align={'center'} justify={'space-between'} gap={'80px'}>
                     <div>
-                        <StyledTitle lineHeight={1} as={'span'} display={'block'}>Hello, i'm</StyledTitle>
-                        <StyledTitle fontSize={'68px'} lineHeight={1.2} as={'h1'} color={theme.colors.blue500}>
+                        <StyledSubtext as={'span'}>Hello, i'm</StyledSubtext>
+                        <StyledTitle fontSize={'68px'} marginBottom={'0'} as={'h1'} color={theme.colors.blue500}>
                             Bekreneva Anna
-                            <StyledTitle as={'span'} lineHeight={2} display={'block'} color={theme.colors.orange500}>
+                            <StyledSubtext as={'span'} color={theme.colors.orange500}>
                                 Frontend developer
-                            </StyledTitle>
+                            </StyledSubtext>
                         </StyledTitle>
                     </div>
                     <StyledPictureWrapper>
@@ -26,6 +26,13 @@ export const Hero = () => {
         </StyledHero>
     )
 }
+
+const StyledSubtext = styled(StyledTitle)`
+  line-height: 1.4;
+  display: block;
+  font-size: 24px;
+  mb0
+`
 
 const StyledHero = styled.section`
   min-height: calc(100vh - 68px);

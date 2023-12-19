@@ -1,32 +1,66 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper, StyledTitle} from "../../components";
-import {Skill} from "../../components/skill";
-
+import {StyledTitle, Skill, Container, SrOnly} from "../../components";
+import {theme} from "../../styles";
 
 export const Skills = () => {
     return (
         <StyledSkills>
-            <StyledTitle>Мои скиллы</StyledTitle>
-            <FlexWrapper as={'ul'}>
-                <li>
-                    <Skill title={'CSS / SCSS / SASS'} id={'scssIcon'} width={'60'} height={'60'} viewBox={'0 0 60 60'}/>
-                </li>
-                <li>
-                    <Skill title={'Javascript'} id={'jsIcon'} width={'60'} height={'60'} viewBox={'0 0 60 60'}/>
-                </li>
-                <li>
-                    <Skill title={'React'} id={'reactIcon'} width={'60'} height={'60'} viewBox={'0 0 60 60'}/>
-                </li>
-                <li>
-                    <Skill title={'Redux'} id={'reduxIcon'} width={'60'} height={'60'} viewBox={'0 0 60 60'} />
-                </li>
-                <li>
-                    <Skill title={'Thunk'} id={'tsIcon'} width={'60'} height={'60'} viewBox={'0 0 60 60'} />
-                </li>
-            </FlexWrapper>
+            <SrOnly hidden>My skills</SrOnly>
+            <Container>
+                    <StyledItems>
+                        <StyledItem aria-hidden>
+                            <StyledTitle>My <StyledTitle marginBottom={'0'} as={'span'} color={theme.colors.orange500}>skills</StyledTitle></StyledTitle>
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#f5fcff'} borderColor={'#ddf5ff'} blurColor={'#cef2ff'} title={'React'} id={'reactIcon'}/>
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#faf6ff'} borderColor={'#ede7ff'} blurColor={'#e4d7ff'} title={'Redux'} id={'reduxIcon'} />
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#fffbf2'} borderColor={'#ffeec9'} blurColor={'#ffe9bc'} title={'Javascript'} id={'jsIcon'}/>
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#f6f7ff'} borderColor={'#e7e9ff'} blurColor={'#d7dbff'} title={'Typescript'} id={'tsIcon'} />
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#fff6fa'} borderColor={'#ffe7f0'} blurColor={'#ffd7e9'} title={'css / scss / sass'} id={'scssIcon'}/>
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#fff6fa'} borderColor={'#ffe7f0'} blurColor={'#ffd7e9'} title={'Styled components'} id={'styledIcon'} />
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#f5fcff'} borderColor={'#ddf5ff'} blurColor={'#cef2ff'} title={'Ant design'} id={'antIcon'} />
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#f6f7ff'} borderColor={'#e7e9ff'} blurColor={'#d7dbff'} title={'Material ui'} id={'materialIcon'} />
+                        </StyledItem>
+                        <StyledItem>
+                            <Skill backColor={'#fffbf2'} borderColor={'#ffeec9'} blurColor={'#ffe9bc'} title={'Git / GitHub'} id={'gitIcon'} />
+                        </StyledItem>
+                    </StyledItems>
+            </Container>
         </StyledSkills>
     );
 }
 
-const StyledSkills = styled.section``
+const StyledSkills = styled.section`
+    padding: 90px 0;
+`
+
+const StyledItems = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 24px;
+`
+
+const StyledItem = styled.li`
+  width: 100%;
+
+  &:first-child {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+`
