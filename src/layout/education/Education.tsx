@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {
     Container,
     FlexWrapper,
-    Picture,
     Step,
     StyledPictureWithDecor,
     StyledWrapperPictureWithDecor
@@ -11,42 +10,40 @@ import {
 import myPhotoWebp from "../../assets/images/education/education.webp";
 import myPhoto from "../../assets/images/education/education.jpg";
 import {theme} from "../../styles";
-
-
 export const Education = () => {
     return (
         <section>
             <Container>
-                <FlexWrapper gap={'28px'} justify={'space-between'}>
+                <FlexWrapper gap={'28px'} justify={'space-between'} align={'center'}>
                     <StyledWrapperPictureWithDecor>
-                        <StyledPictureWithDecor src={myPhotoWebp} srcSet={myPhoto} loading={'lazy'} width={410} height={460} alt={'Бекренева Анна'}  />
+                        <StyledPictureWithDecor src={myPhotoWebp} srcSet={myPhoto} loading={'lazy'} width={410} height={460} alt={'Бекренева Анна'}/>
                     </StyledWrapperPictureWithDecor>
-                    <StyledItems as={'ul'}>
-                        <StyledStep>
-                            <Step year={'2020'}
-                                  place={"Layout course by «From 0 to 1»"}
-                                  text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
-                            />
-                        </StyledStep>
-                        <StyledStep>
-                            <Step year={'2021'}
-                                  place={"Web design by Alexey Bychkov"}
-                                  text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
-                            />
-                        </StyledStep>
-                        <StyledStep>
-                            <Step year={'2022'}
-                                  place={"Academy of Advertising and Sales by Alexander Korovkin"}
-                                  text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
-                            />
-                        </StyledStep>
-                        <StyledStep>
-                            <Step year={'2023'}
-                                  place={"Frontend developer by It-incubator"}
-                                  text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
-                            />
-                        </StyledStep>
-                    </StyledItems>
+                        <StyledItems as={'ul'}>
+                            <StyledStep>
+                                <Step year={'2020'}
+                                      place={"Layout course by «From 0 to 1»"}
+                                      text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                                />
+                            </StyledStep>
+                            <StyledStep>
+                                <Step year={'2021'}
+                                      place={"Web design by Alexey Bychkov"}
+                                      text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                                />
+                            </StyledStep>
+                            <StyledStep>
+                                <Step year={'2022'}
+                                      place={"Academy of Advertising and Sales by Alexander Korovkin"}
+                                      text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                                />
+                            </StyledStep>
+                            <StyledStep>
+                                <Step year={'2023'}
+                                      place={"Frontend developer by It-incubator"}
+                                      text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                                />
+                            </StyledStep>
+                        </StyledItems>
                 </FlexWrapper>
             </Container>
         </section>
@@ -62,7 +59,7 @@ const StyledItems = styled(FlexWrapper)`
 
 const StyledStep = styled.li`
   position: relative;
-  
+
   &::before {
     position: absolute;
     content: "";
@@ -74,7 +71,7 @@ const StyledStep = styled.li`
     z-index: 0;
     height: calc(100% + 28px);
   }
-  
+
   &:last-child {
     &::before {
       opacity: 0;

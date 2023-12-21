@@ -127,7 +127,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     color: ${theme.colors.dark800};
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     // Посмотреть видео про шрифты от Светы и дополнить это свойство
     font-family: 'Inter', 'Roboto', sans-serif;
     line-height: 1.4;
