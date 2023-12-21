@@ -5,7 +5,7 @@ import {theme} from "../../styles";
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <section>
             <SrOnly hidden>My skills</SrOnly>
             <Container>
                     <StyledItems>
@@ -25,7 +25,7 @@ export const Skills = () => {
                             <Skill backColor={'#f6f7ff'} borderColor={'#e7e9ff'} blurColor={'#d7dbff'} title={'Typescript'} id={'tsIcon'} />
                         </StyledItem>
                         <StyledItem>
-                            <Skill backColor={'#fff6fa'} borderColor={'#ffe7f0'} blurColor={'#ffd7e9'} title={'css / scss / sass'} id={'scssIcon'}/>
+                            <Skill backColor={'#fffbf2'} borderColor={'#ffeec9'} blurColor={'#ffe9bc'} title={'Git / GitHub'} id={'gitIcon'} />
                         </StyledItem>
                         <StyledItem>
                             <Skill backColor={'#fff6fa'} borderColor={'#ffe7f0'} blurColor={'#ffd7e9'} title={'Styled components'} id={'styledIcon'} />
@@ -37,17 +37,13 @@ export const Skills = () => {
                             <Skill backColor={'#f6f7ff'} borderColor={'#e7e9ff'} blurColor={'#d7dbff'} title={'Material ui'} id={'materialIcon'} />
                         </StyledItem>
                         <StyledItem>
-                            <Skill backColor={'#fffbf2'} borderColor={'#ffeec9'} blurColor={'#ffe9bc'} title={'Git / GitHub'} id={'gitIcon'} />
+                            <Skill backColor={'#fff6fa'} borderColor={'#ffe7f0'} blurColor={'#ffd7e9'} title={'css / scss / sass'} id={'scssIcon'}/>
                         </StyledItem>
                     </StyledItems>
             </Container>
-        </StyledSkills>
+        </section>
     );
 }
-
-const StyledSkills = styled.section`
-    padding: 90px 0;
-`
 
 const StyledItems = styled.ul`
   display: grid;

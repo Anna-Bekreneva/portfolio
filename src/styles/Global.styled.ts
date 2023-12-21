@@ -125,12 +125,20 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    color: ${theme.colors.dark900};
+    color: ${theme.colors.dark800};
     font-weight: 400;
     font-size: 18px;
     // Посмотреть видео про шрифты от Светы и дополнить это свойство
     font-family: 'Inter', 'Roboto', sans-serif;
     line-height: 1.4;
     background-color: ${theme.colors.white};
+  }
+  
+  section {
+    padding: 100px 0;
+    
+    &:nth-child(odd) {
+      background-color: ${theme.colors.orange50};
+    }
   }
 `

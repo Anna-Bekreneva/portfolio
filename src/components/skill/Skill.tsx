@@ -14,7 +14,7 @@ export const Skill: FC<SkillType> = ({ title, backColor, borderColor, blurColor,
 };
 
 const StyledSkill = styled.article<StyledSkillProps>`
-  border-radius: 10px;
+  border-radius: 4px 40px;
   padding: 30px;
   position: relative;
   background-color: ${props => props.backColor};

@@ -1,7 +1,7 @@
 import {ComponentProps, FC} from "react";
 import styled from "styled-components";
 
-type PictureProps = {
+export type PictureProps = {
     lazy?: boolean
     srcSet: string
 } & ComponentProps<'img'>
@@ -16,6 +16,7 @@ export const Picture: FC<PictureProps> = ({ lazy, srcSet,   ...props }) => {
 }
 
 export const StyledPicture = styled.picture`
-img {
-  object-fit: cover;
-}`
+    img {
+      object-fit: cover;
+    }
+`

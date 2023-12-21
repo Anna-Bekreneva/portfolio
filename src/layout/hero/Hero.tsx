@@ -19,7 +19,7 @@ export const Hero = () => {
                         </StyledTitle>
                     </div>
                     <StyledPictureWrapper>
-                        <StyledTestPicture src={myPhotoWebp} srcSet={myPhoto} loading={'lazy'} width={410} height={460} alt={'Бекренева Анна'}  />
+                        <StyledWrapperPicture src={myPhotoWebp} srcSet={myPhoto} loading={'lazy'} width={410} height={460} alt={'Бекренева Анна'}  />
                     </StyledPictureWrapper>
                 </FlexWrapper>
             </Container>
@@ -31,12 +31,11 @@ const StyledSubtext = styled(StyledTitle)`
   line-height: 1.4;
   display: block;
   font-size: 24px;
-  mb0
+  margin-bottom: 0;
 `
 
 const StyledHero = styled.section`
   min-height: calc(100vh - 68px);
-  background-color: ${theme.colors.orange50};
   padding: 50px 0;
   display: flex;
   align-items: center;
@@ -64,8 +63,13 @@ const StyledPictureWrapper = styled.div`
   }
 `
 
-const StyledTestPicture = styled(Picture)`
+const StyledWrapperPicture = styled(Picture)`
   width: 100%;
   border-radius: 20px;
-
+  
+  img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid ${theme.colors.orange200};
+  }
 `

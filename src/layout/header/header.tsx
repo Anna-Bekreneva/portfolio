@@ -14,7 +14,7 @@ export const Header = () => {
                         <MenuItem href={'#'}>Contacts</MenuItem>
                     </FlexWrapper>
                     <FlexWrapper as={'ul'} align={'center'}>
-                        <SocialItem id={'gitIcon'} ariaLabel={'gitHub'} href={'#'}/>
+                        <SocialItem id={'gitHubIcon'} ariaLabel={'gitHub'} href={'#'}/>
                         <SocialItem id={'telegramIcon'} ariaLabel={'Telegram'} href={'#'}/>
                         <SocialItem id={'linkedinIcon'} ariaLabel={'Linkedin'} href={'#'}/>
                     </FlexWrapper>
