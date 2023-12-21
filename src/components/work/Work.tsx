@@ -17,7 +17,7 @@ export const Work: FC<WorkProps> = ({ srcSet, src, alt, title,  text, codeHref, 
     return (
         <StyledWork>
             <StyledContent>
-                <StyledTitle as={'h3'} marginBottom={'0'} fontSize={'20px'}>{title}</StyledTitle>
+                <StyledTitle as={'h3'} marginBottom={'0'} fontSize={'20px'} color={theme.colors.blue500}>{title}</StyledTitle>
                 <StyledText>{text}</StyledText>
                 <StyledTools> Technologies used: <p> {tools}</p> </StyledTools>
                 <StyledLinks>

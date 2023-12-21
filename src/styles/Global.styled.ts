@@ -135,10 +135,11 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   section {
-    padding: 100px 0;
+    padding: 120px 0;
     
     &:nth-child(odd) {
       background-color: ${theme.colors.orange50};
+      padding: 100px 0;
     }
   }
 `

@@ -20,7 +20,7 @@ export const Works = () => {
                               title={'Social network on React'}
                               text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
                               codeHref={'#'} previewHref={'#'}
-                                tools={'JS, TS, React, Redux, Formik, axios'}/>
+                              tools={'JS, TS, React, Redux, Formik, axios'}/>
                     </StyledItem>
                     <StyledItem>
                         <Work alt={'Counter'}
@@ -29,7 +29,7 @@ export const Works = () => {
                               title={'Counter on React'}
                               text={'Краткое описание и очень краткое описание. Краткое и очень краткое описание'}
                               codeHref={'#'} previewHref={'#'}
-                                tools={'JS, TS, React, Redux, Formik, axios'}/>
+                              tools={'JS, TS, React, Redux, Formik, axios'}/>
                     </StyledItem>
                 </StyledItems>
                 <StyledButton type={'button'}>

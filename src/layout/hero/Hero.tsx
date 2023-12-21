@@ -1,4 +1,10 @@
-import {Container, FlexWrapper, StyledTitle, Picture} from "../../components";
+import {
+    Container,
+    FlexWrapper,
+    StyledTitle,
+    StyledWrapperPictureWithDecor,
+    StyledPictureWithDecor
+} from "../../components";
 import styled from "styled-components";
 import myPhotoWebp from '../../assets/images/hero/hero.webp'
 import myPhoto from '../../assets/images/hero/hero.jpg'
@@ -18,9 +24,9 @@ export const Hero = () => {
                             </StyledSubtext>
                         </StyledTitle>
                     </div>
-                    <StyledPictureWrapper>
-                        <StyledWrapperPicture src={myPhotoWebp} srcSet={myPhoto} loading={'lazy'} width={410} height={460} alt={'Бекренева Анна'}  />
-                    </StyledPictureWrapper>
+                    <StyledWrapperPictureWithDecor>
+                        <StyledPictureWithDecor src={myPhotoWebp} srcSet={myPhoto} loading={'lazy'} width={410} height={460} alt={'Бекренева Анна'}  />
+                    </StyledWrapperPictureWithDecor>
                 </FlexWrapper>
             </Container>
         </StyledHero>
@@ -39,37 +45,4 @@ const StyledHero = styled.section`
   padding: 50px 0;
   display: flex;
   align-items: center;
-`
-
-const StyledPictureWrapper = styled.div`
-  max-width: 410px;
-  width: 100%;
-  height: 460px;
-  position: relative;
-  z-index: 1;
-  border-radius: 20px;
-
-  &::before {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    content: "";
-    background-color: ${theme.colors.orange200};
-    opacity: 0.8;
-    top: -6%;
-    left: -6%;
-    z-index: -1;
-    border-radius: inherit;
-  }
-`
-
-const StyledWrapperPicture = styled(Picture)`
-  width: 100%;
-  border-radius: 20px;
-  
-  img {
-    width: 100%;
-    height: 100%;
-    border: 2px solid ${theme.colors.orange200};
-  }
 `
