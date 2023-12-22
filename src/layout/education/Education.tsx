@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {
     Container,
-    FlexWrapper,
+    FlexWrapper, SrOnly,
     Step,
     StyledPictureWithDecor,
     StyledWrapperPictureWithDecor
@@ -13,6 +13,7 @@ import {theme} from "../../styles";
 export const Education = () => {
     return (
         <section>
+            <SrOnly>My education</SrOnly>
             <Container>
                 <FlexWrapper gap={'28px'} justify={'space-between'} align={'center'}>
                     <StyledWrapperPictureWithDecor>

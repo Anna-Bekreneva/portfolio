@@ -1,5 +1,5 @@
 import React from "react";
-import {Header, Hero, Skills, Works, Education, Footer, Contacts} from "./layout";
+import {Header, Hero, Skills, Works, Education, Footer, Contacts, Works2} from "./layout";
 
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
                 <Hero/>
                 <Skills/>
                 <Works/>
+                {/*<Works2/>*/}
                 <Education/>
                 <Contacts/>
             </main>
