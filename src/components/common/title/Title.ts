@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import {theme} from "../../../styles";
+import {adaptiveValue, theme} from "../../../styles";
 export const StyledTitle = styled.h2<StyledTitleProps>`
-  font-weight: 600;
-  font-size: ${props => props.fontSize || '42px'};
-  line-height: 1.2;
+  font-size: ${props => props.fontSize || adaptiveValue(42, 28)};
   color: ${props => props.color || theme.colors.dark900};
   margin-bottom: ${props => props.marginBottom || '32px'};
   text-align: ${props => props.textAlign || 'left'};
   text-transform: ${props => props.transform || 'capitalize'};
   display: inline-block;
+  line-height: 1.2;
+  font-weight: 600;
 `
 
 type StyledTitleProps = {
