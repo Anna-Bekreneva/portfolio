@@ -27,5 +27,5 @@ export const StyledSocialLink = styled.a`
   justify-content: center;
   width: 100%;
   height: 100%;
-  fill: ${theme.colors.blue200};
+  fill: ${theme.colors.brown400};
 `

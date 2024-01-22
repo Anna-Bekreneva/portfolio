@@ -116,20 +116,21 @@ const StyledLinks = styled.div`
   align-items: center;
   gap: 28px;
   display: none;
-  position: relative;
   padding-top: 12px;
+  position: relative;
   
   &::before {
     position: absolute;
-    content: "";
-    width: 100%;
-    left: 0;
     top: 0;
+    left: 0;
+    width: 100%;
     height: 1px;
-    background-color: ${theme.colors.blue200};
+    content: "";
+    background-color: ${theme.colors.brown400};
     opacity: 0.2;
   }
 `
+
 const StyledText = styled.p`
   display: none;
   margin-bottom: 12px;

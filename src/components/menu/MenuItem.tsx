@@ -4,7 +4,7 @@ import {theme} from "../../styles";
 export const MenuItem: FC<MenuItemProps> = ({ href, children}) => {
     return (
         <StyledMenuItem>
-            <StyledMenuLink href={href}>{children}</StyledMenuLink>
+            <a href={href}>{children}</a>
         </StyledMenuItem>
     )
 }
@@ -14,7 +14,6 @@ const StyledMenuItem = styled.li`
   font-size: 18px;
   color: ${theme.colors.blue500};
 `
-const StyledMenuLink = styled.a``
 
 type MenuItemProps = {
     href: string

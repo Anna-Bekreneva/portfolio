@@ -65,7 +65,7 @@ const StyledStep = styled.li`
     position: absolute;
     content: "";
     width: 1px;
-    background-color: ${theme.colors.blue200};
+    background-color: ${theme.colors.brown400};
     opacity: 0.2;
     left: 50px;
     top: 0;

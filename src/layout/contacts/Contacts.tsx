@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Button, Container, FlexWrapper, Icon, StyledTitle} from "../../components";
-import {theme} from "../../styles";
+import {adaptive, theme} from "../../styles";
 
 export const Contacts = () => {
 	return (
@@ -28,15 +28,15 @@ export const Contacts = () => {
 					<StyledForm action="#">
 						<StyledItems>
 							<StyledItem>
-								<StyledField id="contacts-name" name="name" type="text" placeholder={'John'} required/>
+								<StyledField id="contacts-name" name="name" type="text" placeholder={'John'} borderRadius={'24px 4px 4px 4px'}  required/>
 								<StyledLabel htmlFor="contacts-name">Name</StyledLabel>
 							</StyledItem>
 							<StyledItem>
-								<StyledField id="contacts-email" name="name" type="email" placeholder={'john@gmail.com'} required/>
+								<StyledField id="contacts-email" name="name" type="email" placeholder={'john@gmail.com'} borderRadius={'4px 24px 4px 4px'}  required/>
 								<StyledLabel htmlFor="contacts-email">E-mail</StyledLabel>
 							</StyledItem>
 							<StyledItem>
-								<StyledTextarea as={'textarea'} id="contacts-message" name="message" placeholder={" Let's cooperate! "}/>
+								<StyledTextarea as={'textarea'} id="contacts-message" name="message" placeholder={" Let's cooperate! "} borderRadius={'4px 4px 24px 24px'} />
 								<StyledLabel className="sr-only" htmlFor="contacts-message">Your message</StyledLabel>
 							</StyledItem>
 						</StyledItems>
@@ -50,9 +50,14 @@ export const Contacts = () => {
 
 const StyledContacts = styled.section`
 	background-color: ${theme.colors.white} !important;
-	padding: 60px 0 20px !important;
+	// todo: i want to remove important
+	padding: 60px 0 60px !important;
 	position: relative;
 	z-index: 2;
+
+	${adaptive(theme.breakpoints.sm, "min", "width", theme.breakpoints.md)} {
+		background-color: blue;
+	}
 	
 	&::before {
 		position: absolute;
@@ -111,7 +116,7 @@ const StyledForm = styled.form`
 const StyledItems = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	gap: 24px;
+	gap: 20px;
 	
 	&:not(:last-child) {
 		margin-bottom: 20px;
@@ -135,10 +140,10 @@ const StyledLabel = styled.label`
 	transition: top 0.3s;
 	opacity: 0.9;
 `
-const StyledField = styled.input`
+const StyledField = styled.input<{ borderRadius: string }>`
 	width: 100%;
 	padding: 12px 16px;
-	border-radius: 8px;
+	border-radius: ${props => props.borderRadius};
 	border: 1px solid ${theme.colors.orange300};
 	transition: border-color 0.3s;
 	color: ${theme.colors.dark900};
@@ -153,9 +158,14 @@ const StyledField = styled.input`
 	&::placeholder {
 		color: transparent;
 	}
+	
+	&:focus {
+		outline: 0;
+		border-color: ${theme.colors.orange500};
+	}
 `
 
 const StyledTextarea = styled(StyledField)`
-	resize: vertical;
-	min-height: 150px;
+	height: 150px;
+	resize: none;
 `
