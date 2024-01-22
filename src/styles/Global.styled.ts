@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import {theme} from "./Theme";
+import {adaptiveValue} from "./Common";
 
 export function fontFace(fontFamily: string, url: string, weight: number ){
     return `
