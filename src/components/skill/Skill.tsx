@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import styled from "styled-components";
 import {Icon, IconProps} from "../common";
-import {theme} from "../../styles";
+import {adaptive, theme} from "../../styles";
 export const Skill: FC<SkillType> = ({ title, backColor, borderColor, blurColor, ...props }) => {
     return (
         <StyledSkill backColor={backColor} borderColor={borderColor} blurColor={blurColor}>
@@ -25,6 +25,12 @@ const StyledSkill = styled.article<StyledSkillProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
+    border-radius: 4px 28px;
+    padding: 24px 20px 20px;
+    gap: 10px;
+  }
   
   &::before {
     position: absolute;
@@ -46,12 +52,23 @@ const StyledWrapperIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
+    width: 36px;
+    height: 36px;
+  }
 `
 
 const StyledTitle = styled.h3`
   font-size: 18px;
   font-weight: 500;
   color: ${theme.colors.dark800};
+  text-align: center;
+
+  ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
+    font-size: 16px;
+    line-height: 1.2;
+  }
 `
 
 type SkillType = {

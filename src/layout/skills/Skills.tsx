@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {StyledTitle, Skill, Container, SrOnly} from "../../components";
-import {theme} from "../../styles";
+import {adaptive, theme} from "../../styles";
 
 export const Skills = () => {
     return (
@@ -10,8 +10,11 @@ export const Skills = () => {
             <Container>
                     <StyledItems>
                         <StyledItem aria-hidden>
-                            <StyledTitle>My <StyledTitle marginBottom={'0'} as={'span'} color={theme.colors.orange500}>skills</StyledTitle></StyledTitle>
+                            <StyledTitle marginBottom={'0'}>My
+                                <StyledTitle marginBottom={'0'} as={'span'} color={theme.colors.orange500}>skills</StyledTitle>
+                            </StyledTitle>
                         </StyledItem>
+                        {/* todo: use map */}
                         <StyledItem>
                             <Skill backColor={'#f5fcff'} borderColor={'#ddf5ff'} blurColor={'#cef2ff'} title={'React'} id={'reactIcon'}/>
                         </StyledItem>
@@ -49,6 +52,10 @@ const StyledItems = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 24px;
+
+  ${adaptive(theme.breakpoints.sm, "max", "width", theme.breakpoints.sm)} {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
 `
 
 const StyledItem = styled.li`
