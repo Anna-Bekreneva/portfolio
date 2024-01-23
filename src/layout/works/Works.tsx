@@ -5,7 +5,7 @@ import social from '../../assets/images/works/social.jpg'
 import socialWebp from '../../assets/images/works/social.webp'
 import counter from '../../assets/images/works/counter.jpg'
 import counterWebp from '../../assets/images/works/counter.webp'
-import {theme} from "../../styles";
+import {adaptive, adaptiveValue, theme} from "../../styles";
 
 export const Works = () => {
     return (
@@ -44,15 +44,19 @@ export const Works = () => {
 
 const StyledWrapperTitle = styled(StyledTitle)`
   display: block;
-  margin-bottom: 48px;
+  margin-bottom: ${adaptiveValue(48, 32)};
   text-align: center;
 `
 
 const StyledItems = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 36px;
-  margin-bottom: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: ${adaptiveValue(36, 20)};
+  margin-bottom: ${adaptiveValue(32, 26)};
+
+  ${adaptive(theme.breakpoints.sm, "max", "width", theme.breakpoints.sm)} {
+    grid-template-columns: 1fr;
+  }
 `
 
 const StyledItem = styled.li`
