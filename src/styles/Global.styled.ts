@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import {theme} from "./Theme";
-import {adaptiveValue} from "./Common";
+import {adaptive, adaptiveValue} from "./Common";
 
 export function fontFace(fontFamily: string, url: string, weight: number ){
     return `
@@ -120,7 +120,7 @@ export const GlobalStyles = createGlobalStyle`
   picture {
     line-height: 0;
   }
-
+  
   label {
     cursor: pointer;
   }
@@ -133,6 +133,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Inter', 'Roboto', sans-serif;
     line-height: 1.4;
     background-color: ${theme.colors.white};
+
+    ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
+      font-size: 15px;
+    }
   }
   
   section {

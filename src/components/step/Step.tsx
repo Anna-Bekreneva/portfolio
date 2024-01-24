@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import styled from "styled-components";
 import {FlexWrapper, StyledTitle} from "../common";
-import {theme} from "../../styles";
+import {adaptive, adaptiveValue, theme} from "../../styles";
 
 type StepProps = {
     year: string
@@ -10,15 +10,30 @@ type StepProps = {
 }
 export const Step: FC<StepProps> = ({year, place, text}) => {
     return (
-        <FlexWrapper as={'article'}>
-            <StyledYear as={'span'}>{year}</StyledYear>
-            <StyledContent>
-                <StyledTitle fontSize={'22px'} marginBottom={'10px'} color={theme.colors.blue500} as={'h3'}>{place}</StyledTitle>
-                <StyledText>{text}</StyledText>
-            </StyledContent>
-        </FlexWrapper>
+        <StyledStep>
+            <FlexWrapper>
+                <StyledYear as={'span'} marginBottom={'0'}>{year}</StyledYear>
+                <StyledContent>
+                    <StyledTitle fontSize={`${adaptiveValue(22, 18)}`} marginBottom={'10px'} color={theme.colors.blue500} as={'h3'}>{place}</StyledTitle>
+                    <p>{text}</p>
+                </StyledContent>
+            </FlexWrapper>
+        </StyledStep>
     );
 };
+
+const StyledStep = styled.article`
+  ${FlexWrapper} {
+    ${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.lg)} {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
+      flex-direction: column-reverse;
+    }
+  }
+`
 
 const StyledYear = styled(StyledTitle)`
   font-size: 16px;
@@ -35,17 +50,15 @@ const StyledYear = styled(StyledTitle)`
   flex-shrink: 0;
   transition: background-color 0.3s;
   z-index: 1;
-  
-  &:not(:last-child) {
-    margin-bottom: 12px;
+
+  ${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.lg)} {
+    font-size: 15px;
+    padding: 8px;
+    width: 80px;
+    margin-top: 0;
   }
 `
 
 const StyledContent = styled.div`
   
-`
-
-
-const StyledText = styled.p`
-  font-size: 16px;
 `

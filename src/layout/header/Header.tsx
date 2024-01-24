@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper as={'nav'} justify={'space-between'} align={'center'}>
+                <FlexWrapper as={'nav'} justify={'space-between'} align={'center'} wrap={'wrap'}>
                     <FlexWrapper as={'ul'} gap={'40px'}>
                         <MenuItem href={'#'}>Main</MenuItem>
                         <MenuItem href={'#'}>Skills</MenuItem>
@@ -26,6 +26,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: ${theme.colors.orange50};
+  color: ${theme.colors.blue500};
   padding-top: 16px;
   padding-bottom: 16px;
 `

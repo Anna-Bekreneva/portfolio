@@ -1,20 +1,17 @@
 import React from "react";
-import {Header, Hero, Skills, Works, Education, Footer, Contacts, Works2} from "./layout";
-
+import {Header, Hero, Skills, Works, Education, Contacts} from "./layout";
 
 function App() {
     return (
         <div className="App">
-            <Header/>
+            {/*<Header/>*/}
             <main>
                 <Hero/>
                 <Skills/>
                 <Works/>
-                {/*<Works2/>*/}
                 <Education/>
-                <Contacts/>
+                {/*<Contacts/>*/}
             </main>
-            {/*<Footer/>*/}
         </div>
     );
 }

@@ -42,6 +42,8 @@ export const Works = () => {
     );
 };
 
+// todo: how often i repeat this code?
+
 const StyledWrapperTitle = styled(StyledTitle)`
   display: block;
   margin-bottom: ${adaptiveValue(48, 32)};
