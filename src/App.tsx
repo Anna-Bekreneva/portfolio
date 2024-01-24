@@ -10,7 +10,7 @@ function App() {
                 <Skills/>
                 <Works/>
                 <Education/>
-                {/*<Contacts/>*/}
+                <Contacts/>
             </main>
         </div>
     );
