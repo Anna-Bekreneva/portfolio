@@ -85,7 +85,8 @@ const StyledContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-
+  box-shadow: 0 -5px 35px 0 rgba(255, 189, 148, 0.25);
+  
   @media screen and (any-hover: hover) and (min-width: ${theme.breakpoints.xl}) {
     position: absolute;
     top: 0;
@@ -97,6 +98,11 @@ const StyledContent = styled.div`
     padding: 12px 24px;
     border-radius: 2px 24px;
     height: auto;
+  }
+
+  ${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.lg)} {
+    padding: 20px 16px 16px;
+    border-radius: 0 0 12px 12px;
   }
 
   @media screen and (any-hover: none) {
@@ -116,6 +122,10 @@ const StyledContent = styled.div`
 const StyledBox = styled.div`
   @media screen and (any-hover: none) {
     margin-bottom: 20px;
+  }
+
+  ${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.lg)} {
+    margin-bottom: 16px;
   }
 `
 
@@ -176,18 +186,21 @@ const StyledLink = styled.a`
   font-weight: 500;
   color: ${theme.colors.orange500};
   color: ${theme.colors.blue500};
+
+  ${adaptive(theme.breakpoints.sm, "max", "width", theme.breakpoints.sm)} {
+    gap: 6px;
+  }
 `
 
 const StyledWork = styled.article`
   width: 100%;
   height: 100%;
-  border-radius: 12px;
   background-color: ${theme.colors.white};
   position: relative;
-  font-size: 16px;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
+  border-radius: 24px;
 
   @media screen and (any-hover: hover) and (min-width: ${theme.breakpoints.xl}) {
     &:hover {

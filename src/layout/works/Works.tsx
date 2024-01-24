@@ -11,7 +11,7 @@ export const Works = () => {
     return (
         <section>
             <Container>
-                <StyledWrapperTitle marginBottom={'48px'} textAlign={'center'}>
+                <StyledWrapperTitle marginBottom={`${adaptiveValue(56, 28)}`} textAlign={'center'}>
                     My <StyledTitle marginBottom={'0'} as={'span'} color={theme.colors.orange500}>portfolio</StyledTitle>
                 </StyledWrapperTitle>
                 <StyledItems>
