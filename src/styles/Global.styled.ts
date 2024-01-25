@@ -120,11 +120,11 @@ export const GlobalStyles = createGlobalStyle`
   picture {
     line-height: 0;
   }
-  
+
   label {
     cursor: pointer;
   }
-  
+
   input,
   textarea {
     &:-webkit-autofill:hover,
@@ -134,10 +134,10 @@ export const GlobalStyles = createGlobalStyle`
       -webkit-text-fill-color: #1f1f20;
       -webkit-box-shadow: 0 0 0 1000px transparent inset;
       transition: background-color 5000s ease-in-out 0s;
-      background-image: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
-    }  
+      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 174, 255, 0.04) 50%, rgba(255, 255, 255, 0) 51%, rgba(0, 174, 255, 0.03) 100%);
+    }
   }
-  
+
   body {
     color: ${theme.colors.dark800};
     font-weight: 400;
@@ -148,15 +148,6 @@ export const GlobalStyles = createGlobalStyle`
 
     ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
       font-size: 15px;
-    }
-  }
-  
-  section {
-    padding: 120px 0;
-    
-    &:nth-child(odd) {
-      background-color: ${theme.colors.orange50};
-      padding: 100px 0;
     }
   }
 `

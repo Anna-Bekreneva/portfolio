@@ -1,19 +1,13 @@
 import React, {FC} from "react";
-import styled from "styled-components";
-import {theme} from "../../styles";
+import {S} from './MenuItem_Style'
+
 export const MenuItem: FC<MenuItemProps> = ({ href, children}) => {
     return (
-        <StyledMenuItem>
+        <S.MenuItem>
             <a href={href}>{children}</a>
-        </StyledMenuItem>
+        </S.MenuItem>
     )
 }
-
-const StyledMenuItem = styled.li`
-  font-weight: 500;
-  font-size: 18px;
-  color: ${theme.colors.blue500};
-`
 
 type MenuItemProps = {
     href: string

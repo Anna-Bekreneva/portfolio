@@ -9,11 +9,10 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   flex-wrap: ${props => props.wrap || 'nowrap'};
 `
 
-// todo: do i need to do so?
 type FlexWrapperProps = {
-    direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
+    direction?: string
     gap?: string
-    align?: 'stretch' | 'center' | 'start' | 'end'
-    justify?: 'start' | 'center' | 'space-between' | 'space-around' | 'space-evenly'
-    wrap?: 'nowrap' | 'wrap' | 'wrap-reverse'
+    align?: string
+    justify?: string
+    wrap?: string
 }

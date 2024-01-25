@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {theme} from "../../../styles";
+import {adaptive, theme} from "../../../styles";
 
 export const Button = styled.button`
   color: ${theme.colors.white};
@@ -11,6 +11,5 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
   font-weight: 500;
 `

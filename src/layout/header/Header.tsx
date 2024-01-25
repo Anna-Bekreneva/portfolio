@@ -1,32 +1,78 @@
 import {Container, FlexWrapper, MenuItem, SocialItem} from "../../components";
-import styled from "styled-components";
-import {theme} from "../../styles";
+import {S} from './Header_Style'
+import {useState} from "react";
 
 export const Header = () => {
+
+    const menuItems: MenuItemsType[] = [
+        {
+            title: 'Main',
+            href: '#',
+        },
+        {
+            title: 'Skills',
+            href: '#',
+        },
+        {
+            title: 'Portfolio',
+            href: '#',
+        },
+        {
+            title: 'Education',
+            href: '#',
+        },
+        {
+            title: 'Contacts',
+            href: '#',
+        }
+    ]
+    const socialItems: SocialItemsType[] = [
+        {
+            iconId: 'gitHubIcon',
+            ariaLabel: 'gitHub',
+            href: '#',
+        },
+        {
+            iconId: 'telegramIcon',
+            ariaLabel: 'Telegram',
+            href: '#',
+        },
+        {
+            iconId: 'linkedinIcon',
+            ariaLabel: 'Linkedin',
+            href: '#',
+        }
+    ]
+
+    const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
-                <FlexWrapper as={'nav'} justify={'space-between'} align={'center'} wrap={'wrap'}>
-                    <FlexWrapper as={'ul'} gap={'40px'}>
-                        <MenuItem href={'#'}>Main</MenuItem>
-                        <MenuItem href={'#'}>Skills</MenuItem>
-                        <MenuItem href={'#'}>Portfolio</MenuItem>
-                        <MenuItem href={'#'}>Contacts</MenuItem>
-                    </FlexWrapper>
+                <S.HeaderWrapper as={'nav'} isOpen={mobileMenuIsOpen}>
+                    <S.MenuWrapper as={'ul'} gap={'40px'}>
+                        {menuItems.map((item) => <MenuItem key={item.title} href={item.href}>{item.title}</MenuItem>)}
+                    </S.MenuWrapper>
                     <FlexWrapper as={'ul'} align={'center'}>
-                        <SocialItem id={'gitHubIcon'} ariaLabel={'gitHub'} href={'#'}/>
-                        <SocialItem id={'telegramIcon'} ariaLabel={'Telegram'} href={'#'}/>
-                        <SocialItem id={'linkedinIcon'} ariaLabel={'Linkedin'} href={'#'}/>
+                        {socialItems.map((item) => <SocialItem key={item.iconId} id={item.iconId}
+                                                               ariaLabel={item.ariaLabel} href={item.href}/>)}
                     </FlexWrapper>
-                </FlexWrapper>
+                </S.HeaderWrapper>
+                <S.Burger onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} isOpen={mobileMenuIsOpen}>
+                    <S.BurgerLine isOpen={mobileMenuIsOpen}/>
+                </S.Burger>
             </Container>
-        </StyledHeader>
+        </S.Header>
     )
 }
 
-const StyledHeader = styled.header`
-  background-color: ${theme.colors.orange50};
-  color: ${theme.colors.blue500};
-  padding-top: 16px;
-  padding-bottom: 16px;
-`
+type MenuItemsType = {
+    title: string,
+    href: string,
+}
+
+type SocialItemsType = {
+    iconId: string
+    ariaLabel: string
+    href: string
+}

@@ -4,7 +4,7 @@ import {Header, Hero, Skills, Works, Education, Contacts} from "./layout";
 function App() {
     return (
         <div className="App">
-            {/*<Header/>*/}
+            <Header/>
             <main>
                 <Hero/>
                 <Skills/>

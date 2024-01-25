@@ -6,7 +6,7 @@ export const StyledTitle = styled.h2<StyledTitleProps>`
   margin-bottom: ${props => props.marginBottom || '32px'};
   text-align: ${props => props.textAlign || 'left'};
   text-transform: ${props => props.transform || 'capitalize'};
-  display: inline-block;
+  display: ${props => props.display || 'inline-block'};
   line-height: 1.2;
   font-weight: 600;
 `
@@ -17,4 +17,5 @@ type StyledTitleProps = {
     marginBottom?: string
     textAlign?: string
     transform?: string
+    display?: string
 }
