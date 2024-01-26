@@ -1,10 +1,8 @@
 import styled, {css} from "styled-components";
 import {adaptive, theme} from "../../styles";
-import {Button, FlexWrapper, IconWrapper} from "../../components";
+import {Button, FlexWrapper, IconWrapper, Section} from "../../components";
 
-const Contacts = styled.section`
-	padding: 60px 0;
-	
+const Contacts = styled(Section)`
 	${FlexWrapper} {
 		${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
 			flex-direction: column;

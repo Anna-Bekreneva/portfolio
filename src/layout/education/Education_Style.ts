@@ -10,6 +10,7 @@ const WrapperTitle = styled(StyledTitle)`
   }
 `
 const Education = styled(Section)`
+  
   ${StyledWrapperPictureWithDecor} {
     align-self: flex-start;
     margin-left:20px;

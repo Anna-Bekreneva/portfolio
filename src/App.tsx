@@ -1,9 +1,11 @@
 import React from "react";
 import {Header, Hero, Skills, Works, Education, Contacts} from "./layout";
+import {Particle} from "./components/particle";
 
 function App() {
     return (
         <div className="App">
+            <Particle/>
             <Header/>
             <main>
                 <Hero/>

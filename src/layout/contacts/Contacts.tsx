@@ -5,7 +5,7 @@ import {S} from './Contacts_Style'
 
 export const Contacts = () => {
 	return (
-		<S.Contacts>
+		<S.Contacts padding={'60px 0'}>
 			<Container>
 				<FlexWrapper justify={'space-between'} gap={'26px'}>
 					<S.Content>

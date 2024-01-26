@@ -3,6 +3,7 @@ import {Button, Section} from "../../components";
 import {adaptive, adaptiveValue, theme} from "../../styles";
 
 const Works = styled(Section)`
+  
   ${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.lg)} {
     padding: 60px 0;
   }
