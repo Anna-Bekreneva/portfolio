@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {theme} from "../../styles";
+import {focusVisible, theme} from "../../styles";
 
 const SocialItem = styled.li`
   width: 36px;
@@ -12,6 +12,12 @@ const SocialLink = styled.a`
   width: 100%;
   height: 100%;
   fill: ${theme.colors.brown400};
+  transition: fill 0.3s, box-shadow 0.3s;
+  ${focusVisible()};
+
+  &:hover {
+    fill: ${theme.colors.orange500};
+  }
 `
 
 export const S = {

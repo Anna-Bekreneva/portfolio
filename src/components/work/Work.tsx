@@ -1,20 +1,7 @@
 import React, {FC} from 'react';
-import {Icon, Picture, StyledTitle} from "../common";
+import {Icon, IconWrapper, Picture, StyledTitle} from "../common";
 import {theme} from "../../styles";
 import {S} from './Work_Style'
-
-type WorkProps = {
-    srcSet: string
-    src: string
-    alt: string
-    title: string
-    text: string
-    codeHref: string
-    previewHref: string
-    tools: string
-}
-
-// todo: all icon do orange or brown?
 export const Work: FC<WorkProps> = ({ srcSet, src, alt, title,  text, codeHref, previewHref, tools }) => {
     return (
         <S.Work>
@@ -25,14 +12,14 @@ export const Work: FC<WorkProps> = ({ srcSet, src, alt, title,  text, codeHref, 
                     <S.Tools> Technologies used: <p> {tools}</p> </S.Tools>
                 </S.Box>
                 <S.Links>
-                    <S.Link href={codeHref}>
-                        <S.Icon>
+                    <S.Link href={codeHref} target={'_blank'}>
+                        <IconWrapper width={'20px'} height={'20px'}>
                             <Icon width={'12'} height={'12'} idIcon={'stapleIcon'} fill={'transparent'} stroke={theme.colors.white}/>
-                        </S.Icon>
+                        </IconWrapper>
                         Watch work
                     </S.Link>
-                    <S.Link href={previewHref}>
-                        <Icon width={'20'} height={'20'} idIcon={'gitHubIcon'} fill={theme.colors.orange500}/>
+                    <S.Link href={previewHref} target={'_blank'}>
+                        <Icon width={'20'} height={'20'} idIcon={'gitHubIcon'} fill={theme.colors.brown400}/>
                         Watch code
                     </S.Link>
                 </S.Links>
@@ -44,3 +31,13 @@ export const Work: FC<WorkProps> = ({ srcSet, src, alt, title,  text, codeHref, 
     );
 };
 
+type WorkProps = {
+    srcSet: string
+    src: string
+    alt: string
+    title: string
+    text: string
+    codeHref: string
+    previewHref: string
+    tools: string
+}

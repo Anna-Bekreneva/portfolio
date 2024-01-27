@@ -21,7 +21,7 @@ const works: WorkType[] = [
         src: './assets/images/works/social.jpg',
         title: 'Social network on React',
         text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
-        codeHref: '#',
+        codeHref: 'https://github.com/Anna-Bekreneva/social-network',
         previewHref: '#',
         tools: 'JS, TS, React, Redux, Formik, axios',
     },
@@ -31,7 +31,7 @@ const works: WorkType[] = [
         src: './assets/images/works/counter.jpg',
         title: 'Counter on React',
         text: 'Краткое описание и очень краткое описание. Краткое и очень краткое описание',
-        codeHref: '#',
+        codeHref: 'https://github.com/Anna-Bekreneva/counter',
         previewHref: '#',
         tools: 'JS, TS, React, Redux, Formik, axios',
     }

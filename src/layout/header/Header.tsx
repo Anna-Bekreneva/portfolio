@@ -30,18 +30,18 @@ export const Header = () => {
         {
             iconId: 'gitHubIcon',
             ariaLabel: 'gitHub',
-            href: '#',
+            href: 'https://github.com/Anna-Bekreneva',
         },
         {
             iconId: 'telegramIcon',
             ariaLabel: 'Telegram',
-            href: '#',
+            href: 'https://t.me/anna_bekrenewa',
         },
-        {
-            iconId: 'linkedinIcon',
-            ariaLabel: 'Linkedin',
-            href: '#',
-        }
+        // {
+        //     iconId: 'linkedinIcon',
+        //     ariaLabel: 'Linkedin',
+        //     href: '#',
+        // }
     ]
 
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
@@ -51,11 +51,14 @@ export const Header = () => {
             <Container>
                 <S.HeaderWrapper as={'nav'} isOpen={mobileMenuIsOpen}>
                     <S.MenuWrapper as={'ul'} gap={'40px'}>
-                        {menuItems.map((item) => <MenuItem key={item.title} href={item.href}>{item.title}</MenuItem>)}
+                        {menuItems.map((item) => {
+                            return <MenuItem key={item.title} href={item.href}>{item.title}</MenuItem>
+                        })}
                     </S.MenuWrapper>
                     <FlexWrapper as={'ul'} align={'center'}>
-                        {socialItems.map((item) => <SocialItem key={item.iconId} id={item.iconId}
-                                                               ariaLabel={item.ariaLabel} href={item.href}/>)}
+                        {socialItems.map((item) => {
+                            return <SocialItem key={item.iconId} id={item.iconId} ariaLabel={item.ariaLabel} href={item.href}/>
+                        })}
                     </FlexWrapper>
                 </S.HeaderWrapper>
                 <S.Burger onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} isOpen={mobileMenuIsOpen}>

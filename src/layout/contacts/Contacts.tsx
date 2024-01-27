@@ -15,14 +15,14 @@ export const Contacts = () => {
 						<S.Text as={'p'}>
 							If you have a question or suggestion, please submit the form and I will get back to you as soon as possible
 						</S.Text>
-						<S.Link href="mailto:anjbekrenewa@gmail.com">
+						<S.Link href="mailto:anjbekrenewa@gmail.com" target={'_blank'}>
 							<IconWrapper width={'24px'} height={'24px'}>
-								<Icon width={'16'} height={'16'} viewBox={'0 0 24 24'} idIcon={'email'} fill={theme.colors.orange50} stroke={theme.colors.orange500}/>
+								<Icon width={'16'} height={'16'} viewBox={'0 0 24 24'} idIcon={'email'} fill={theme.colors.orange50} stroke={theme.colors.brown400}/>
 							</IconWrapper>
 							anjbekrenewa@gmail.com
 						</S.Link>
 						<S.Bottom as={'span'}>
-							©2024 Все права защищены
+							©2024 all rights reserved
 						</S.Bottom>
 					</S.Content>
 					<S.Form action="#">
@@ -45,7 +45,7 @@ export const Contacts = () => {
 						<Button type="submit">Отправить</Button>
 					</S.Form>
 					<S.Bottom as={'span'} mobile>
-						©2024 Все права защищены
+						©2024 all rights reserved
 					</S.Bottom>
 				</FlexWrapper>
 			</Container>

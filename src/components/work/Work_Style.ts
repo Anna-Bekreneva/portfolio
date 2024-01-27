@@ -1,16 +1,6 @@
 import styled from "styled-components";
-import {adaptive, adaptiveValue, theme} from "../../styles";
-import {StyledPicture, StyledTitle} from "../common";
-
-const Icon = styled.span`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 20px;
-    height: 20px;
-	border-radius: 50%;
-	background-color: ${theme.colors.orange500};
-`
+import {adaptive, adaptiveValue, focusVisible, theme} from "../../styles";
+import {IconWrapper, StyledPicture, StyledTitle} from "../common";
 
 const WrapperPicture = styled.div`
   border-radius: 12px;
@@ -65,7 +55,7 @@ const Content = styled.div`
     left: 50%;
     z-index: 3;
     transform: translate(-50%, -50%);
-    transition: top 0.3s, width 0.3s, height 0.4s, border-radius 0.4s;
+    transition: top 0.5s, width 0.3s, height 0.4s, border-radius 0.4s;
     width: max-content;
     padding: 12px 24px;
     border-radius: 2px 24px;
@@ -150,14 +140,43 @@ const Links = styled.div`
 `
 
 const Link = styled.a`
-  color: ${theme.colors.blue500};
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   font-weight: 500;
-  color: ${theme.colors.orange500};
   color: ${theme.colors.blue500};
+  transition: color 0.3s, box-shadow 0.3s;
+  ${focusVisible()};
+  
+  &:hover {
+    color: ${theme.colors.orange500};
+  }
+  
+  &:first-child {
+    &:hover {
+      
+      ${IconWrapper} {
+        background-color: ${theme.colors.orange500};
+      }
+    }
+  }
+
+  &:last-child {
+    &:hover {
+      svg {
+        fill: ${theme.colors.orange500};
+      }
+    }
+  }
+
+  ${IconWrapper} {
+    transition: background-color 0.3s;
+  }
+  
+  svg {
+    transition: fill 0.3s;
+  }
 
   ${adaptive(theme.breakpoints.sm, "max", "width", theme.breakpoints.sm)} {
     gap: 6px;
@@ -174,6 +193,11 @@ const Work = styled.article`
   justify-content: space-between;
   border-radius: 24px;
 
+  ${IconWrapper} {
+    border-radius: 50%;
+    background-color: ${theme.colors.brown400};
+  }
+  
   @media screen and (any-hover: hover) and (min-width: ${theme.breakpoints.xl}) {
     &:hover {
       ${Content} {
@@ -215,5 +239,5 @@ const Work = styled.article`
 `
 
 export const S = {
-    Icon, WrapperPicture, Content, Box, Text, Tools, Links, Link, Work
+    WrapperPicture, Content, Box, Text, Tools, Links, Link, Work
 }

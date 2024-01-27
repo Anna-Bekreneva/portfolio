@@ -8,6 +8,7 @@ import {
 } from "../../components";
 import {theme} from "../../styles";
 import {S} from './Education_Style'
+import Tilt from "react-parallax-tilt";
 
 const steps: StepProps[] = [
     {
@@ -41,12 +42,17 @@ export const Education = () => {
                                     color={theme.colors.orange500}>education</StyledTitle>
                 </S.WrapperTitle>
                 <FlexWrapper gap={'28px'} justify={'space-between'} align={'center'}>
-                    <StyledWrapperPictureWithDecor>
-                        <StyledPictureWithDecor src={'./assets/images/education/education.webp'} srcSet={'./assets/images/education/education.jpg'} loading={'lazy'} width={410}
-                                                height={460} alt={'Bekreneva Anna'}/>
-                    </StyledWrapperPictureWithDecor>
+                    <Tilt tiltReverse={true}>
+                        <StyledWrapperPictureWithDecor>
+                            <StyledPictureWithDecor src={'./assets/images/education/education.webp'}
+                                                    srcSet={'./assets/images/education/education.jpg'}
+                                                    loading={'lazy'}
+                                                    width={410}
+                                                    height={460}
+                                                    alt={'Bekreneva Anna'}/>
+                        </StyledWrapperPictureWithDecor>
+                    </Tilt>
                     <S.Items as={'ul'}>
-
                         { steps.map((step) => {
                             return (
                                 <S.Step key={step.place}>

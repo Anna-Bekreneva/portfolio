@@ -1,4 +1,4 @@
-import {theme} from "../../styles";
+import {focusVisible, theme} from "../../styles";
 import styled from "styled-components";
 
 const MenuItem = styled.li`
@@ -7,4 +7,14 @@ const MenuItem = styled.li`
   color: ${theme.colors.blue500};
 `
 
-export const S = {MenuItem}
+const MenuLink = styled.a`
+  transition: color 0.3s, box-shadow 0.3s;
+  ${focusVisible()};
+  
+  &:hover {
+      color: ${theme.colors.orange500};
+  }
+`
+
+
+export const S = {MenuItem, MenuLink}

@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {adaptive, theme} from "../../styles";
+import {adaptive, focusVisible, theme} from "../../styles";
 import {Button, FlexWrapper, IconWrapper, Section} from "../../components";
 
 const Contacts = styled(Section)`
@@ -11,7 +11,8 @@ const Contacts = styled(Section)`
 
 	${IconWrapper} {
 		border-radius: 50%;
-		background-color: ${theme.colors.orange500};
+		background-color: ${theme.colors.brown400};
+		transition: background-color 0.3s;
 	}
 	
 	${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
@@ -77,6 +78,16 @@ const Link = styled.a`
 	align-items: center;
 	align-self: flex-start;
 	gap: 8px;
+	transition: color 0.3s, box-shadow 0.3s;
+	${focusVisible()};
+	
+	&:hover {
+		color: ${theme.colors.orange500};
+		
+		${IconWrapper} {
+			background-color: ${theme.colors.orange500};
+		}
+	}
 
 	${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.lg)} {
 		font-size: 15px;
@@ -169,7 +180,7 @@ const Label = styled.label`
 	font-size: 14px;
 	background-color: ${theme.colors.white};
 	padding: 2px 6px;
-	transition: top 0.3s;
+	transition: top 0.3s, opacity 0.3s;
 	opacity: 0.9;
 
 	${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
@@ -193,6 +204,10 @@ const Field = styled.input<{ borderRadius: string, borderRadiusMobile: string }>
 	${adaptive(theme.breakpoints.sm, "max", "width", theme.breakpoints.sm)} {
 		border-radius: ${props => props.borderRadiusMobile};
 	}
+
+	&::placeholder {
+		color: transparent;
+	}
 	
 	&:focus,
 	&:not(:placeholder-shown) {
@@ -201,13 +216,15 @@ const Field = styled.input<{ borderRadius: string, borderRadiusMobile: string }>
 		}
 	}
 	
-	&::placeholder {
-		color: transparent;
-	}
-	
 	&:focus {
 		outline: 0;
 		border-color: ${theme.colors.orange500};
+	}
+	
+	&:hover {
+		& ~ label {
+			opacity: 1;
+		}
 	}
 `
 
