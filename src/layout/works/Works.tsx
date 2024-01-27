@@ -38,7 +38,7 @@ const works: WorkType[] = [
 ]
 export const Works: FC = () => {
     return (
-        <S.Works backgroundColor={theme.colors.orange50}>
+        <S.Works id={'works'} backgroundColor={theme.colors.orange50}>
             <Container>
                 <StyledTitle textAlign={'center'} display={'block'} marginBottom={`${adaptiveValue(56, 28)}`}>
                     My <StyledTitle marginBottom={'0'} as={'span'}

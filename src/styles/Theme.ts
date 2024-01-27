@@ -18,6 +18,7 @@ export const theme = {
         orange500: '#ff6e31',
         blue500: '#243763',
         brown400: '#ad8e70',
+        brown800: '#b33800'
     },
 
     breakpoints,

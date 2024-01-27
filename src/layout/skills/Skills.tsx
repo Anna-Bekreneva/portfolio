@@ -73,7 +73,7 @@ const skills: SkillType[] = [
 
 export const Skills: FC = () => {
     return (
-        <Section padding={'120px 0'} mobilePadding={'50px 0'}>
+        <Section id={'skills'} padding={'120px 0'} mobilePadding={'50px 0'}>
             <SrOnly hidden>My skills</SrOnly>
             <Container>
                     <S.Items>
@@ -85,7 +85,7 @@ export const Skills: FC = () => {
 
                         { skills.map((skill) => {
                             return (
-                                <S.Item>
+                                <S.Item key={skill.idIcon}>
                                     <Skill title={skill.title}
                                            idIcon={skill.idIcon}
                                            backgroundColor={skill.backgroundColor}

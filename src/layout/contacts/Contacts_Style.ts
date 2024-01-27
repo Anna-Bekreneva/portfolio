@@ -233,6 +233,23 @@ const Textarea = styled(Field)`
 	resize: none;
 `
 
+const FormInfo = styled.p<{ error: boolean }>`
+	padding: 6px 12px;
+	border-radius: 8px;
+	background-color: ${theme.colors.orange200};
+	margin-bottom: 20px;
+
+	${props => {
+		if(props.error) {
+			return css`
+				color: ${theme.colors.brown800};
+				border: 1px solid ${theme.colors.brown800};
+			`
+		}
+	}}
+`
+
+
 export const S = {
-    Contacts, Content, Text, Link, Bottom, Form, FormBox, Items, Item, Label, Field, Textarea
+    Contacts, Content, Text, Link, Bottom, Form, FormBox, Items, Item, Label, Field, Textarea, FormInfo
 }

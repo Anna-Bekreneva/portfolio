@@ -1,29 +1,26 @@
 import {Container, FlexWrapper, MenuItem, SocialItem} from "../../components";
 import {S} from './Header_Style'
-import {useState} from "react";
+import {FC, useState} from "react";
 
-export const Header = () => {
+export type HeaderPositionType = 'normal' | 'fixed' | 'hide'
+export const Header: FC = () => {
 
     const menuItems: MenuItemsType[] = [
         {
-            title: 'Main',
-            href: '#',
-        },
-        {
             title: 'Skills',
-            href: '#',
+            to: 'skills',
         },
         {
             title: 'Portfolio',
-            href: '#',
+            to: 'works',
         },
         {
             title: 'Education',
-            href: '#',
+            to: 'education',
         },
         {
             title: 'Contacts',
-            href: '#',
+            to: 'contacts',
         }
     ]
     const socialItems: SocialItemsType[] = [
@@ -47,12 +44,12 @@ export const Header = () => {
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
     return (
-        <S.Header>
+        <S.Header >
             <Container>
                 <S.HeaderWrapper as={'nav'} isOpen={mobileMenuIsOpen}>
                     <S.MenuWrapper as={'ul'} gap={'40px'}>
                         {menuItems.map((item) => {
-                            return <MenuItem key={item.title} href={item.href}>{item.title}</MenuItem>
+                            return <MenuItem key={item.title} to={item.to}>{item.title}</MenuItem>
                         })}
                     </S.MenuWrapper>
                     <FlexWrapper as={'ul'} align={'center'}>
@@ -71,7 +68,7 @@ export const Header = () => {
 
 type MenuItemsType = {
     title: string,
-    href: string,
+    to: string,
 }
 
 type SocialItemsType = {

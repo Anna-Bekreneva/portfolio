@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import {FC, useEffect, useState} from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-export const Particle = () => {
+export const Particle: FC = () => {
 
     const [ init, setInit ] = useState(false);
 

@@ -35,7 +35,7 @@ const steps: StepProps[] = [
 
 export const Education = () => {
     return (
-        <S.Education>
+        <S.Education id={'education'}>
             <Container>
                 <S.WrapperTitle>
                     My <StyledTitle marginBottom={'0'} as={'span'}

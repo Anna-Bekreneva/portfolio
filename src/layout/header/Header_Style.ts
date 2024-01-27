@@ -1,12 +1,15 @@
 import {adaptive, theme} from "../../styles";
 import styled, {css} from "styled-components";
 import {FlexWrapper} from "../../components";
+import {HeaderPositionType} from "./Header";
 
 const Header = styled.header`
   background-color: ${theme.colors.orange50};
   color: ${theme.colors.blue500};
   padding-top: 16px;
   padding-bottom: 16px;
+  position: relative;
+  z-index: 100;
 `
 
 const HeaderWrapper = styled(FlexWrapper)<{isOpen: boolean}>`

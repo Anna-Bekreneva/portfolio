@@ -12,7 +12,8 @@ import {FC} from "react";
 import {S} from './Hero_Styles'
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
-export const Hero: FC = () => {
+import {HeaderPositionType} from "../header";
+export const Hero: FC= () => {
     return (
         <S.Hero>
             <Container>

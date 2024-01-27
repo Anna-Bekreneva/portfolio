@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {FlexWrapper, StyledTitle} from "../../components";
 import {adaptive, adaptiveValue, theme} from "../../styles";
 
@@ -13,6 +13,7 @@ const Hero = styled.section`
   padding: 50px 0;
   display: flex;
   align-items: center;
+}
   
   ${FlexWrapper} {
     gap: ${adaptiveValue(80, 40)};

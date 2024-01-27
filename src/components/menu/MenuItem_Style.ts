@@ -1,5 +1,6 @@
 import {focusVisible, theme} from "../../styles";
 import styled from "styled-components";
+import {Link} from "react-scroll";
 
 const MenuItem = styled.li`
   font-weight: 500;
@@ -7,7 +8,7 @@ const MenuItem = styled.li`
   color: ${theme.colors.blue500};
 `
 
-const MenuLink = styled.a`
+const MenuLink = styled(Link)`
   transition: color 0.3s, box-shadow 0.3s;
   ${focusVisible()};
   

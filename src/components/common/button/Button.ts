@@ -24,4 +24,8 @@ export const Button = styled.button`
   &:hover {
     border-radius: 6px;
   }
+  
+  &:active {
+    background-color: ${theme.colors.orange300};
+  }
 `

@@ -127,10 +127,10 @@ export const GlobalStyles = createGlobalStyle`
 
   input,
   textarea {
+    &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus
     &:-webkit-autofill {
-      border: 0;
       -webkit-text-fill-color: #1f1f20;
       -webkit-box-shadow: 0 0 0 1000px transparent inset;
       transition: background-color 5000s ease-in-out 0s;
