@@ -1,6 +1,6 @@
 import {Container, FlexWrapper, MenuItem, SocialItem} from "../../components";
 import {S} from './Header_Style'
-import {FC, useEffect, useRef, useState} from "react";
+import {FC} from "react";
 import Headroom from "react-headroom";
 import {useHeader} from "../../hooks";
 export type HeaderPositionType = 'normal' | 'fixed' | 'hide'
