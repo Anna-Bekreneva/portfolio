@@ -1,7 +1,6 @@
 import {adaptive, theme} from "../../styles";
 import styled, {css} from "styled-components";
 import {FlexWrapper} from "../../components";
-import {HeaderPositionType} from "./Header";
 
 const Header = styled.header`
   background-color: ${theme.colors.orange50};
@@ -10,6 +9,10 @@ const Header = styled.header`
   padding-bottom: 16px;
   position: relative;
   z-index: 100;
+
+  ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
+    height: 62px;
+  }
 `
 
 const HeaderWrapper = styled(FlexWrapper)<{isOpen: boolean}>`
@@ -31,20 +34,23 @@ const HeaderWrapper = styled(FlexWrapper)<{isOpen: boolean}>`
     transition: transform 0.5s;
     flex-direction: column;
     align-items: flex-start;
+    height: 100vh;
     
     ${props => {
         if (props.isOpen) {
             return css`
               ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
-                right: 0;
-                z-index: 50;
-                height: 100vh;
                 overflow-y: auto;
                 transform: translateX(0);
                 visibility: visible;
-                opacity: 1;
-                transition: transform 0.3s ease-in-out;
+                transition: transform 0.5s ease-in-out;
               }
+            `
+        } else {
+            return css`
+              visibility: visible;
+              transform: translateX(100%);
+              transition: transform 0.5s ease-in-out;
             `
         }
     }

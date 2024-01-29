@@ -1,15 +1,13 @@
 import React from "react";
 import {Header, Hero, Skills, Works, Education, Contacts} from "./layout";
 import {Particle} from "./components/particle";
-import Headroom from "react-headroom";
 
+// todo: i need to check burger menu and add styles for disabled button
 function App() {
     return (
-        <div className="App">
+        <div className="App" style={{overflow: 'hidden'}}>
             <Particle/>
-            <Headroom>
-                <Header/>
-            </Headroom>
+            <Header/>
 
             <main>
                 <Hero/>

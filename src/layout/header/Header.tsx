@@ -1,7 +1,8 @@
 import {Container, FlexWrapper, MenuItem, SocialItem} from "../../components";
 import {S} from './Header_Style'
-import {FC, useState} from "react";
-
+import {FC, useEffect, useRef, useState} from "react";
+import Headroom from "react-headroom";
+import {useHeader} from "../../hooks";
 export type HeaderPositionType = 'normal' | 'fixed' | 'hide'
 export const Header: FC = () => {
 
@@ -41,28 +42,32 @@ export const Header: FC = () => {
         // }
     ]
 
-    const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
+    const {menuWrapperRef, burgerButtonRef, mobileMenuIsOpen, setMobileMenuIsOpen} = useHeader()
+
+    const header = <S.Header >
+        <Container>
+            <S.HeaderWrapper as={'nav'} isOpen={mobileMenuIsOpen} ref={menuWrapperRef}>
+                <S.MenuWrapper as={'ul'} gap={'40px'}>
+                    {menuItems.map((item) => {
+                        return <MenuItem key={item.title} to={item.to} callback={() => setMobileMenuIsOpen(false)}>{item.title}</MenuItem>
+                    })}
+                </S.MenuWrapper>
+                <FlexWrapper as={'ul'} align={'center'}>
+                    {socialItems.map((item) => {
+                        return <SocialItem key={item.iconId} id={item.iconId} ariaLabel={item.ariaLabel} href={item.href}/>
+                    })}
+                </FlexWrapper>
+            </S.HeaderWrapper>
+            <S.Burger onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} isOpen={mobileMenuIsOpen} ref={burgerButtonRef}>
+                <S.BurgerLine isOpen={mobileMenuIsOpen}/>
+            </S.Burger>
+        </Container>
+    </S.Header>
 
     return (
-        <S.Header >
-            <Container>
-                <S.HeaderWrapper as={'nav'} isOpen={mobileMenuIsOpen}>
-                    <S.MenuWrapper as={'ul'} gap={'40px'}>
-                        {menuItems.map((item) => {
-                            return <MenuItem key={item.title} to={item.to}>{item.title}</MenuItem>
-                        })}
-                    </S.MenuWrapper>
-                    <FlexWrapper as={'ul'} align={'center'}>
-                        {socialItems.map((item) => {
-                            return <SocialItem key={item.iconId} id={item.iconId} ariaLabel={item.ariaLabel} href={item.href}/>
-                        })}
-                    </FlexWrapper>
-                </S.HeaderWrapper>
-                <S.Burger onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} isOpen={mobileMenuIsOpen}>
-                    <S.BurgerLine isOpen={mobileMenuIsOpen}/>
-                </S.Burger>
-            </Container>
-        </S.Header>
+        <>
+            <Headroom> {header} </Headroom>
+        </>
     )
 }
 
