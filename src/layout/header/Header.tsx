@@ -58,7 +58,7 @@ export const Header: FC = () => {
                     })}
                 </FlexWrapper>
             </S.HeaderWrapper>
-            <S.Burger onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} isOpen={mobileMenuIsOpen} ref={burgerButtonRef}>
+            <S.Burger onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} isOpen={mobileMenuIsOpen} ref={burgerButtonRef} aria-label={'Mobile menu'}>
                 <S.BurgerLine isOpen={mobileMenuIsOpen}/>
             </S.Burger>
         </Container>

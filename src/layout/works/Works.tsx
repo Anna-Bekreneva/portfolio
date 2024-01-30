@@ -1,39 +1,40 @@
 import React, {FC} from 'react';
-import {Button, Container, StyledTitle, Work} from "../../components";
+import {Button, Container, PictureProps, StyledTitle, Work} from "../../components";
 import {adaptiveValue, theme} from "../../styles";
 import {S} from './Works_Style'
 
 type WorkType = {
-    alt: string
-    srcSet: string
-    src: string
     title: string
     text: string
     codeHref: string
     previewHref: string
     tools: string
-}
+} & PictureProps
 
 const works: WorkType[] = [
     {
         alt: 'Social network',
-        srcSet: './assets/images/works/social.webp',
+        srcWebp: './assets/images/works/social.webp 1x, ./assets/images/works/social@2x.webp 2x',
+        srcAvif: './assets/images/works/social.avif 1x, ./assets/images/works/social@2x.avif 2x',
         src: './assets/images/works/social.jpg',
+        srcSet: './assets/images/works/social@2x.jpg 2x',
         title: 'Social network on React',
-        text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+        text: 'The project is implemented partially on class components. All CRUD operations are implemented',
         codeHref: 'https://github.com/Anna-Bekreneva/social-network',
         previewHref: '#',
-        tools: 'JS, TS, React, Redux, Formik, axios',
+        tools: 'TS, React, Redux, Formik, Axios',
     },
     {
         alt: 'Counter',
-        srcSet: './assets/images/works/counter.webp',
+        srcWebp: './assets/images/works/counter.webp 1x, ./assets/images/works/counter@2x.webp 2x',
+        srcAvif: './assets/images/works/counter.avif 1x, ./assets/images/works/counter@2x.avif 2x',
         src: './assets/images/works/counter.jpg',
+        srcSet: '',
         title: 'Counter on React',
-        text: 'Краткое описание и очень краткое описание. Краткое и очень краткое описание',
+        text: 'Small pet project on functional components. Popular and custom hooks are used. Work with localstorage is implemented. App is optimised with reactive capabilities ',
         codeHref: 'https://github.com/Anna-Bekreneva/counter',
         previewHref: '#',
-        tools: 'JS, TS, React, Redux, Formik, axios',
+        tools: 'TS, React, Redux, LocalStorage',
     }
 ]
 export const Works: FC = () => {
@@ -50,8 +51,10 @@ export const Works: FC = () => {
                         return (
                             <S.Item key={work.title}>
                                 <Work alt={work.alt}
-                                      srcSet={work.srcSet}
+                                      srcWebp={work.srcWebp}
+                                      srcAvif={work.srcAvif}
                                       src={work.src}
+                                      srcSet={work.srcSet}
                                       title={work.title}
                                       text={work.text}
                                       codeHref={work.codeHref}

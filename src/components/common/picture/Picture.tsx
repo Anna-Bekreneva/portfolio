@@ -2,15 +2,18 @@ import {ComponentProps, FC} from "react";
 import styled from "styled-components";
 
 export type PictureProps = {
+    alt?: string
     lazy?: boolean
-    srcSet: string
+    srcWebp: string
+    srcAvif: string
 } & ComponentProps<'img'>
 
-export const Picture: FC<PictureProps> = ({ lazy, srcSet,   ...props }) => {
+export const Picture: FC<PictureProps> = ({ alt, lazy, srcWebp, srcAvif, ...props }) => {
     return (
         <StyledPicture>
-            <source srcSet={srcSet} type="image/webp"/>
-            <img loading={lazy ? 'lazy' : 'eager'} {...props}/>
+            <source srcSet={srcAvif} type="image/avif"/>
+            <source srcSet={srcWebp} type="image/webp"/>
+            <img loading={lazy ? 'lazy' : 'eager'} alt={alt ?? ''} {...props}/>
         </StyledPicture>
     )
 }

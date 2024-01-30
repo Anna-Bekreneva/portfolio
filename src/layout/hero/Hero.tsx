@@ -5,14 +5,11 @@ import {
     StyledWrapperPictureWithDecor,
     StyledPictureWithDecor, SrOnly
 } from "../../components";
-import myPhoto from '../../assets/images/hero/hero.jpg'
-import myPhotoWebp from '../../assets/images/hero/hero.webp'
 import {theme} from "../../styles";
 import {FC} from "react";
 import {S} from './Hero_Styles'
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
-import {HeaderPositionType} from "../header";
 export const Hero: FC= () => {
     return (
         <S.Hero>
@@ -38,7 +35,13 @@ export const Hero: FC= () => {
                     </div>
                     <Tilt tiltReverse={true}>
                         <StyledWrapperPictureWithDecor>
-                            <StyledPictureWithDecor src={myPhoto} srcSet={myPhotoWebp} loading={'lazy'} width={460} height={460} alt={'Bekreneva Anna'}  />
+                            <StyledPictureWithDecor srcAvif={'./assets/images/hero/hero.avif, ./assets/images/hero/hero@2x.avif 2x'}
+                                                    srcWebp={'./assets/images/hero/hero.webp, ./assets/images/hero/hero@2x.webp 2x'}
+                                                    src={'./assets/images/hero/hero.jpg'}
+                                                    srcSet={'./assets/images/hero/hero@2x.jpg, 2x'}
+                                                    width={460}
+                                                    height={460}
+                                                    alt={'Bekreneva Anna'}  />
                         </StyledWrapperPictureWithDecor>
                     </Tilt>
                 </FlexWrapper>

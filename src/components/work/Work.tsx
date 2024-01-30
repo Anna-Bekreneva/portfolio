@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
-import {Icon, IconWrapper, Picture, StyledTitle} from "../common";
+import {Icon, IconWrapper, Picture, PictureProps, StyledTitle} from "../common";
 import {theme} from "../../styles";
 import {S} from './Work_Style'
-export const Work: FC<WorkProps> = ({ srcSet, src, alt, title,  text, codeHref, previewHref, tools }) => {
+export const Work: FC<WorkProps> = ({ srcWebp, srcAvif, src, srcSet, alt, title,  text, codeHref, previewHref, tools }) => {
     return (
         <S.Work>
             <S.Content>
@@ -25,19 +25,16 @@ export const Work: FC<WorkProps> = ({ srcSet, src, alt, title,  text, codeHref, 
                 </S.Links>
             </S.Content>
             <S.WrapperPicture>
-                <Picture srcSet={srcSet} src={src} alt={alt} width={610} height={380} loading={'lazy'}></Picture>
+                <Picture srcWebp={srcWebp} srcAvif={srcAvif} src={src} srcSet={srcSet} alt={alt} width={610} height={380} loading={'lazy'}/>
             </S.WrapperPicture>
         </S.Work>
     );
 };
 
 type WorkProps = {
-    srcSet: string
-    src: string
-    alt: string
     title: string
     text: string
     codeHref: string
     previewHref: string
     tools: string
-}
+} & PictureProps

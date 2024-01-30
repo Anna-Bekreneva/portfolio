@@ -131,7 +131,8 @@ const Links = styled.div`
     height: 1px;
     content: "";
     background-color: ${theme.colors.brown400};
-    opacity: 0.2;
+    transition: opacity 0.5s;
+    opacity: 0.3;
   }
 
   @media screen and (any-hover: hover) and (min-width: ${theme.breakpoints.xl}) {

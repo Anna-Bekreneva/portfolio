@@ -1,3 +1,4 @@
 .headroom--pinned {
     box-shadow: 0 4px 40px 0 rgba(194, 176, 149, 0.3);
+    z-index: 150 !important;
 }

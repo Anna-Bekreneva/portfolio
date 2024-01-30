@@ -7,6 +7,7 @@ const WrapperTitle = styled(StyledTitle)`
 
   ${adaptive(theme.breakpoints.md, "min", "width", theme.breakpoints.md)} {
     visibility: hidden;
+    overflow: hidden;
   }
 `
 const Education = styled(Section)`
