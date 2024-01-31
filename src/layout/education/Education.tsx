@@ -2,15 +2,17 @@ import React from 'react';
 import {
     Container,
     FlexWrapper,
-    Step, StepProps,
-    StyledPictureWithDecor, StyledTitle,
+    Step,
+    StepProps,
+    StyledPictureWithDecor,
+    StyledTitle,
     StyledWrapperPictureWithDecor
 } from "../../components";
 import {theme} from "../../styles";
 import {S} from './Education_Style'
 import Tilt from "react-parallax-tilt";
 
-const steps: StepProps[] = [
+const steps: Omit<StepProps, 'delay'>[] = [
     {
         year: '2020',
         place: 'Layout course by «From 0 to 1»',
@@ -44,25 +46,27 @@ export const Education = () => {
                 <FlexWrapper gap={'28px'} justify={'space-between'} align={'center'}>
                     <Tilt tiltReverse={true}>
                         <StyledWrapperPictureWithDecor>
-                            <StyledPictureWithDecor srcAvif={'./assets/images/education/education.avif, ./assets/images/education/education@2x.avif 2x'}
-                                                    srcWebp={'./assets/images/education/education.webp, ./assets/images/education/education@2x.webp 2x'}
-                                                    src={'./assets/images/education/education.jpg'}
-                                                    srcSet={'./assets/images/education/education@2x.jpg, 2x'}
-                                                    loading={'lazy'}
-                                                    width={410}
-                                                    height={460}
-                                                    alt={'Bekreneva Anna'}/>
+                            <StyledPictureWithDecor
+                                srcAvif={'./assets/images/education/education.avif, ./assets/images/education/education@2x.avif 2x'}
+                                srcWebp={'./assets/images/education/education.webp, ./assets/images/education/education@2x.webp 2x'}
+                                src={'./assets/images/education/education.jpg'}
+                                srcSet={'./assets/images/education/education@2x.jpg, 2x'}
+                                loading={'lazy'}
+                                width={410}
+                                height={460}
+                                alt={'Bekreneva Anna'}/>
                         </StyledWrapperPictureWithDecor>
                     </Tilt>
                     <S.Items as={'ul'}>
-                        { steps.map((step) => {
+                        {steps.map((step, index) => {
                             return (
                                 <S.Step key={step.place}>
-                                    <Step year={step.year} place={step.place} text={step.text}/>
+                                    <Step delay={index + 1.5} year={step.year} place={step.place} text={step.text}/>
                                 </S.Step>
                             )
-                        }) }
+                        })}
                     </S.Items>
+
                 </FlexWrapper>
             </Container>
         </S.Education>

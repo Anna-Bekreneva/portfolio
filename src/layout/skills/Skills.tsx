@@ -83,17 +83,16 @@ export const Skills: FC = () => {
                             </StyledTitle>
                         </S.Item>
 
-                        { skills.map((skill) => {
-                            return (
-                                <S.Item key={skill.idIcon}>
-                                    <Skill title={skill.title}
-                                           idIcon={skill.idIcon}
-                                           backgroundColor={skill.backgroundColor}
-                                           borderColor={skill.borderColor}
-                                           blurColor={skill.blurColor}/>
-                                </S.Item>
-                            )
-                        })}
+                            { skills.map((skill) => {
+                                return (
+                                    <S.Item key={skill.idIcon} blurColor={skill.blurColor}>
+                                        <Skill title={skill.title}
+                                               idIcon={skill.idIcon}
+                                               backgroundColor={skill.backgroundColor}
+                                               borderColor={skill.borderColor}/>
+                                    </S.Item>
+                                )
+                            })}
 
                     </S.Items>
             </Container>

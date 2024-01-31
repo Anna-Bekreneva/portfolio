@@ -5,7 +5,6 @@ import {IconWrapper} from "../common";
 const Skill = styled.article<StyledSkillProps>`
   border-radius: 4px 40px;
   padding: 30px;
-  position: relative;
   background-color: ${props => props.backgroundColor};
   border: 1px solid ${props => props.borderColor};
   width: 100%;
@@ -14,7 +13,8 @@ const Skill = styled.article<StyledSkillProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  position: relative;
+  z-index: 5;
   
   ${IconWrapper} {
     ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
@@ -27,25 +27,6 @@ const Skill = styled.article<StyledSkillProps>`
     border-radius: 4px 28px;
     padding: 24px 20px 20px;
     gap: 10px;
-  }
-  
-  &::before {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 124px;
-    height: 124px;
-    border-radius: 10px;
-    background-color: ${props => props.blurColor};
-    filter: blur(50px);
-    z-index: -2;
-
-    ${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.lg)} {
-      width: 68px;
-      height: 68px;
-    }
   }
 `
 
@@ -63,7 +44,6 @@ const Title = styled.h3`
 export type StyledSkillProps = {
     backgroundColor: string
     borderColor: string;
-    blurColor: string;
 }
 
 export const S = {

@@ -11,13 +11,36 @@ const Items = styled.ul`
   }
 `
 
-const Item = styled.li`
+const Item = styled.li<{blurColor?: string}>`
   width: 100%;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 124px;
+    height: 124px;
+    border-radius: 10px;
+    background-color: ${props => props.blurColor};
+    filter: blur(50px);
+    z-index: 0;
+    ${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.lg)} {
+      width: 68px;
+      height: 68px;
+    }
+  }
 
   &:first-child {
     justify-content: center;
     display: flex;
     align-items: center;
+    
+    &::before {
+      opacity: 0;
+    }
   }
 `
 
