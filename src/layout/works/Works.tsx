@@ -26,8 +26,10 @@ const works: WorkType[] = [
     },
     {
         alt: 'Counter',
-        srcWebp: './assets/images/works/counter.webp 1x, ./assets/images/works/counter@2x.webp 2x',
-        srcAvif: './assets/images/works/counter.avif 1x, ./assets/images/works/counter@2x.avif 2x',
+        // srcWebp: './assets/images/works/counter.webp 1x, ./assets/images/works/counter@2x.webp 2x',
+        srcWebp: '',
+        // srcAvif: './assets/images/works/counter.avif 1x, ./assets/images/works/counter@2x.avif 2x',
+        srcAvif: '',
         src: './assets/images/works/counter.jpg',
         srcSet: '',
         title: 'Counter on React',

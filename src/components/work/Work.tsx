@@ -12,12 +12,12 @@ export const Work: FC<WorkProps> = ({ srcWebp, srcAvif, src, srcSet, alt, title,
                     <S.Tools> Technologies used: <p> {tools}</p> </S.Tools>
                 </S.Box>
                 <S.Links>
-                    <S.Link href={codeHref} target={'_blank'}>
-                        <IconWrapper width={'20px'} height={'20px'}>
-                            <Icon width={'12'} height={'12'} idIcon={'stapleIcon'} fill={'transparent'} stroke={theme.colors.white}/>
-                        </IconWrapper>
-                        Watch work
-                    </S.Link>
+                    {/*<S.Link href={codeHref} target={'_blank'}>*/}
+                    {/*    <IconWrapper width={'20px'} height={'20px'}>*/}
+                    {/*        <Icon width={'12'} height={'12'} idIcon={'stapleIcon'} fill={'transparent'} stroke={theme.colors.white}/>*/}
+                    {/*    </IconWrapper>*/}
+                    {/*    Watch work*/}
+                    {/*</S.Link>*/}
                     <S.Link href={previewHref} target={'_blank'}>
                         <Icon width={'20'} height={'20'} idIcon={'gitHubIcon'} fill={theme.colors.brown400}/>
                         Watch code
