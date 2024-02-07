@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.efdfdde3.css","mappings":"AAAA,kBACI,2CAAiD,CACjD,qBACJ","sources":["styles/style.css"],"sourcesContent":[".headroom--pinned {\r\n    box-shadow: 0 4px 40px 0 rgba(194, 176, 149, 0.3);\r\n    z-index: 150 !important;\r\n}"],"names":[],"sourceRoot":""}
