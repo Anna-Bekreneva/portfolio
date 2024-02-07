@@ -2,3 +2,22 @@
     box-shadow: 0 4px 40px 0 rgba(194, 176, 149, 0.3);
     z-index: 150 !important;
 }
+
+.animation-off-mobile {
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    opacity: 1;
+}

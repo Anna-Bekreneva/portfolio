@@ -8,12 +8,12 @@ export type PictureProps = {
     srcAvif: string
 } & ComponentProps<'img'>
 
-export const Picture: FC<PictureProps> = ({ alt, lazy, srcWebp, srcAvif, ...props }) => {
+export const Picture: FC<PictureProps> = ({ alt, lazy, srcWebp, srcAvif, srcSet, src, ...props }) => {
     return (
         <StyledPicture>
-            <source srcSet={srcAvif} type="image/avif"/>
-            <source srcSet={srcWebp} type="image/webp"/>
-            <img loading={lazy ? 'lazy' : 'eager'} alt={alt ?? ''} {...props}/>
+            <source srcSet={process.env.PUBLIC_URL + srcAvif} type="image/avif"/>
+            <source srcSet={process.env.PUBLIC_URL + srcWebp} type="image/webp"/>
+            <img srcSet={process.env.PUBLIC_URL + srcSet} src={process.env.PUBLIC_URL + src} loading={lazy ? 'lazy' : 'eager'} alt={alt ?? ''} {...props}/>
         </StyledPicture>
     )
 }

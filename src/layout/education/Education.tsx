@@ -40,17 +40,18 @@ export const Education = () => {
         <S.Education id={'education'}>
             <Container>
                 <S.WrapperTitle>
-                    My <StyledTitle marginBottom={'0'} as={'span'}
-                                    color={theme.colors.orange500}>education</StyledTitle>
+                    My <StyledTitle marginBottom={'0'} as={'span'} color={theme.colors.orange500}>
+                    education
+                </StyledTitle>
                 </S.WrapperTitle>
-                <FlexWrapper gap={'28px'} justify={'space-between'} align={'center'}>
+                <FlexWrapper gap={'28px'} justify={'space-between'}>
                     <Tilt tiltReverse={true}>
                         <StyledWrapperPictureWithDecor>
                             <StyledPictureWithDecor
-                                srcAvif={'./assets/images/education/education.avif, ./assets/images/education/education@2x.avif 2x'}
-                                srcWebp={'./assets/images/education/education.webp, ./assets/images/education/education@2x.webp 2x'}
-                                src={'./assets/images/education/education.jpg'}
-                                srcSet={'./assets/images/education/education@2x.jpg, 2x'}
+                                srcAvif={'/assets/images/education/education.avif, /assets/images/education/education@2x.avif 2x'}
+                                srcWebp={'/assets/images/education/education.webp, /assets/images/education/education@2x.webp 2x'}
+                                src={'/assets/images/education/education.jpg'}
+                                srcSet={'/assets/images/education/education@2x.jpg, 2x'}
                                 loading={'lazy'}
                                 width={410}
                                 height={460}
@@ -66,7 +67,6 @@ export const Education = () => {
                             )
                         })}
                     </S.Items>
-
                 </FlexWrapper>
             </Container>
         </S.Education>

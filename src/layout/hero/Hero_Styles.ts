@@ -32,6 +32,4 @@ const Hero = styled.section`
   }
 `
 
-export const S = {
-    Subtext, Hero
-}
+export const S = { Subtext, Hero }

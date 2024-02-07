@@ -11,8 +11,9 @@ export const StyledWrapperPictureWithDecor = styled.div`
   border-radius: 20px;
 
   ${adaptive(theme.breakpoints.sm, "max", "width", theme.breakpoints.sm)} {
-    width: 92%;
+    width: 96%;
     height: 360px;
+    margin: 0 auto;
   }
   
   &::before {
