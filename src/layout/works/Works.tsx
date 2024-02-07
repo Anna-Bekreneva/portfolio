@@ -19,23 +19,21 @@ const works: WorkType[] = [
         src: './assets/images/works/social.jpg',
         srcSet: './assets/images/works/social@2x.jpg 2x',
         title: 'Social network on React',
-        text: 'The project is implemented partially on class components. All CRUD operations are implemented',
+        text: 'The project is implemented partially on class components. All the CRUD operations exist there',
         codeHref: 'https://github.com/Anna-Bekreneva/social-network',
         previewHref: '#',
         tools: 'TS, React, Redux, Formik, Axios',
     },
     {
         alt: 'Counter',
-        // srcWebp: './assets/images/works/counter.webp 1x, ./assets/images/works/counter@2x.webp 2x',
-        srcWebp: '',
-        // srcAvif: './assets/images/works/counter.avif 1x, ./assets/images/works/counter@2x.avif 2x',
-        srcAvif: '',
+        srcWebp: './assets/images/works/counter.webp 1x, ./assets/images/works/counter@2x.webp 2x',
+        srcAvif: './assets/images/works/counter.avif 1x, ./assets/images/works/counter@2x.avif 2x',
         src: './assets/images/works/counter.jpg',
-        srcSet: '',
+        srcSet: './assets/images/works/counter@2x.jpg 2x',
         title: 'Counter on React',
         text: 'Small pet project on functional components. Popular and custom hooks are used. Work with localstorage is implemented. App is optimised with reactive capabilities ',
         codeHref: 'https://github.com/Anna-Bekreneva/counter',
-        previewHref: '#',
+        previewHref: 'https://anna-bekreneva.github.io/counter/',
         tools: 'TS, React, Redux, LocalStorage',
     }
 ]
@@ -66,7 +64,7 @@ export const Works: FC = () => {
                         )
                     })}
                 </S.Items>
-                <Button type={'button'}>
+                <Button as={'a'} href={'#contacts'}>
                     Cooperate!
                 </Button>
             </Container>

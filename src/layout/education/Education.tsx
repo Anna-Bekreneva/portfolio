@@ -16,17 +16,17 @@ const steps: Omit<StepProps, 'delay'>[] = [
     {
         year: '2020',
         place: 'Layout course by «From 0 to 1»',
-        text: 'I have systematized my knowledge of HTML, CSS, and SCSS. I studied the BEM methodology, pixel-perfect coding, and the Gulp build system. There were are lot of practice and received code reviews from my mentor.'
+        text: 'I have systematized my knowledge of HTML, CSS, and SCSS. I studied the BEM methodology, pixel-perfect coding, and the Gulp build system. There was a lot of practice and i received code reviews from my mentor.'
     },
     {
         year: '2021',
         place: 'Web Design Course by Alexey Bychkov',
-        text: 'I learned how to create interactive prototypes and design responsive. I studied the fundamental patterns and principles in design'
+        text: 'I learned how to create interactive prototypes and flexible design. I studied the fundamental patterns and principles in design.'
     },
     {
         year: '2022',
         place: '«Academy of Advertising and Sales» by Alexander Korovkin',
-        text: 'I learned how to analyse competitors and target audiences. I studied the basics of marketing. I became better understanding of the business and customer needs.'
+        text: 'I learned how to analyze competitors and target audiences. I studied the basics of marketing. I got a better understanding of the business and customer\'s needs.'
     },
     {
         year: '2023',

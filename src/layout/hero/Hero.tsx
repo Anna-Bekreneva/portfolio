@@ -35,13 +35,14 @@ export const Hero: FC= () => {
                     </div>
                     <Tilt tiltReverse={true}>
                         <StyledWrapperPictureWithDecor>
-                            <StyledPictureWithDecor srcAvif={'./assets/images/hero/hero.avif, ./assets/images/hero/hero@2x.avif 2x'}
-                                                    srcWebp={'./assets/images/hero/hero.webp, ./assets/images/hero/hero@2x.webp 2x'}
-                                                    src={'./assets/images/hero/hero.jpg'}
-                                                    srcSet={'./assets/images/hero/hero@2x.jpg, 2x'}
-                                                    width={460}
-                                                    height={460}
-                                                    alt={'Bekreneva Anna'}  />
+                            <StyledPictureWithDecor
+                                srcAvif={'./assets/images/hero/hero.avif, ./assets/images/hero/hero@2x.avif 2x'}
+                                srcWebp={'./assets/images/hero/hero.webp, ./assets/images/hero/hero@2x.webp 2x'}
+                                src={'./assets/images/hero/hero.jpg'}
+                                srcSet={'./assets/images/hero/hero@2x.jpg, 2x'}
+                                width={460}
+                                height={460}
+                                alt={'Bekreneva Anna'}  />
                         </StyledWrapperPictureWithDecor>
                     </Tilt>
                 </FlexWrapper>
@@ -49,3 +50,6 @@ export const Hero: FC= () => {
         </S.Hero>
     )
 }
+
+//THIS IS COMMIT
+// add preview for counter, correct link cooperate, correct some text

@@ -10,6 +10,7 @@ const Works = styled(Section)`
   
   ${Button} {
     margin: 0 auto;
+    width: max-content;
     justify-content: center;
     
     ${adaptive(theme.breakpoints.sm, "max", "width", theme.breakpoints.sm)} {
