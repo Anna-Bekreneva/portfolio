@@ -213,6 +213,11 @@ const Work = styled.article`
 
       ${Text} {
         display: block;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
       }
 
       ${WrapperPicture} {

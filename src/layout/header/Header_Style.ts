@@ -35,6 +35,7 @@ const HeaderWrapper = styled(FlexWrapper)<{isOpen: boolean}>`
     flex-direction: column;
     align-items: flex-start;
     height: 100vh;
+    height: 100dvh;
     
     ${props => {
         if (props.isOpen) {
