@@ -103,15 +103,8 @@ const Tools = styled.div`
   @media screen and (any-hover: hover) and (min-width: ${theme.breakpoints.xl}) {
     display: none;
   }
-  
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+  display: inline-block;
   color: ${theme.colors.blue500};
-  
-  p {
-    font-weight: 500;
-  }
 `
 
 const Links = styled.div`

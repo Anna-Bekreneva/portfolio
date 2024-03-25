@@ -30,11 +30,11 @@ export const Header: FC = () => {
             ariaLabel: 'gitHub',
             href: 'https://github.com/Anna-Bekreneva',
         },
-        {
-            iconId: 'telegramIcon',
-            ariaLabel: 'Telegram',
-            href: 'https://t.me/anna_bekrenewa',
-        },
+        // {
+        //     iconId: 'telegramIcon',
+        //     ariaLabel: 'Telegram',
+        //     href: 'https://t.me/anna_bekrenewa',
+        // },
         // {
         //     iconId: 'linkedinIcon',
         //     ariaLabel: 'Linkedin',

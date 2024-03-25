@@ -21,8 +21,9 @@ const Works = styled(Section)`
 
 const Items = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: ${adaptiveValue(36, 20)};
+  grid-template-columns: repeat(auto-fit, minmax(393px, 1fr));
+  column-gap: ${adaptiveValue(36, 20)};
+  row-gap: ${adaptiveValue(56, 20)};
   margin-bottom: ${adaptiveValue(32, 26)};
 
   ${adaptive(theme.breakpoints.sm, "max", "width", theme.breakpoints.sm)} {

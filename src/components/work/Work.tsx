@@ -9,7 +9,7 @@ export const Work: FC<WorkProps> = ({ srcWebp, srcAvif, src, srcSet, alt, title,
                 <S.Box>
                     <StyledTitle as={'h3'} marginBottom={'0'} fontSize={'20px'} color={theme.colors.blue500}>{title}</StyledTitle>
                     <S.Text>{text}</S.Text>
-                    <S.Tools> Technologies used: <p> {tools}</p> </S.Tools>
+                    <S.Tools> <b>Technologies used:</b> {tools}</S.Tools>
                 </S.Box>
                 <S.Links>
                     <S.Link href={previewHref} target={'_blank'}>
