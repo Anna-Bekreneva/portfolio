@@ -48,10 +48,10 @@ export const Education = () => {
                     <Tilt tiltReverse={true}>
                         <StyledWrapperPictureWithDecor>
                             <StyledPictureWithDecor
-                                srcAvif={'/assets/images/education/education.avif, /assets/images/education/education@2x.avif 2x'}
-                                srcWebp={'/assets/images/education/education.webp, /assets/images/education/education@2x.webp 2x'}
-                                src={'/assets/images/education/education.jpg'}
-                                srcSet={'/assets/images/education/education@2x.jpg, 2x'}
+                                srcAvif={`${process.env.PUBLIC_URL}/assets/images/education/education.avif 1x, ${process.env.PUBLIC_URL}/assets/images/education/education@2x.avif 2x`}
+                                srcWebp={`${process.env.PUBLIC_URL}/assets/images/education/education.webp 1x, ${process.env.PUBLIC_URL}/assets/images/education/education@2x.webp 2`}
+                                src={`${process.env.PUBLIC_URL}/assets/images/education/education.jpg`}
+                                srcSet={`${process.env.PUBLIC_URL}/assets/images/education/education.jpg 1x, ${process.env.PUBLIC_URL}/assets/images/education/education@2x.jpg, 2x`}
                                 loading={'lazy'}
                                 width={410}
                                 height={460}

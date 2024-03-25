@@ -36,10 +36,10 @@ export const Hero: FC= () => {
                     <Tilt tiltReverse={true}>
                         <StyledWrapperPictureWithDecor>
                             <StyledPictureWithDecor
-                                srcAvif={'/assets/images/hero/hero.avif, /assets/images/hero/hero@2x.avif 2x'}
-                                srcWebp={'/assets/images/hero/hero.webp, /assets/images/hero/hero@2x.webp 2x'}
-                                src={'/assets/images/hero/hero.jpg'}
-                                srcSet={'/assets/images/hero/hero@2x.jpg, 2x'}
+                                srcAvif={`${process.env.PUBLIC_URL}/assets/images/hero/hero.avif 1x, ${process.env.PUBLIC_URL}/assets/images/hero/hero@2x.avif 2x`}
+                                srcWebp={`${process.env.PUBLIC_URL}/assets/images/hero/hero.webp 1x, ${process.env.PUBLIC_URL}/assets/images/hero/hero@2x.webp 2x`}
+                                src={`${process.env.PUBLIC_URL}/assets/images/hero/hero.jpg`}
+                                srcSet={`${process.env.PUBLIC_URL}/assets/images/hero/hero.jpg 1x, ${process.env.PUBLIC_URL}/assets/images/hero/hero@2x.jpg, 2x`}
                                 width={460}
                                 height={460}
                                 alt={'Bekreneva Anna'}  />
