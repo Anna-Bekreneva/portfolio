@@ -203,7 +203,7 @@ const Work = styled.article`
       }
       
       ${Tools} {
-        display: flex;
+        display: inline-block;
       }
 
       ${StyledTitle} {

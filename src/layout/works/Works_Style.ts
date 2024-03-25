@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import {Button, Section} from "../../components";
+import {Button, ButtonStyle, Section} from "../../components";
 import {adaptive, adaptiveValue, theme} from "../../styles";
+import {Link} from "react-scroll";
 
 const Works = styled(Section)`
   
@@ -34,7 +35,13 @@ const Items = styled.ul`
 const Item = styled.li`
   width: 100%;
 `
+const LinkScroll = styled(Link)`
+  ${ButtonStyle};
+  max-width: max-content;
+  margin: 0 auto;
+`
+
 
 export const S = {
-    Works, Items, Item
+    Works, Items, Item, LinkScroll
 }

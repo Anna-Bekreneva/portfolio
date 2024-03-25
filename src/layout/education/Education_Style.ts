@@ -16,7 +16,7 @@ const Education = styled(Section)`
     align-self: flex-start;
     margin-left:20px;
 
-    ${adaptive(theme.breakpoints.md, "max", "width", theme.breakpoints.md)} {
+    ${adaptive(theme.breakpoints.lg, "max", "width", theme.breakpoints.md)} {
       display: none;
     }
   }
@@ -27,8 +27,9 @@ const Items = styled(FlexWrapper)`
   gap: ${adaptiveValue(48, 24)};
   width: 100%;
 
-  ${adaptive(theme.breakpoints.md, "min", "width", theme.breakpoints.md)} {
-    max-width: 600px;
+  ${adaptive(theme.breakpoints.lg, "min", "width", theme.breakpoints.md)} {
+    max-width: 640px;
+    padding-left: 40px;
   }
 `
 

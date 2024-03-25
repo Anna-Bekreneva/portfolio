@@ -75,7 +75,7 @@ export const Contacts = () => {
 							</S.Item>
 						</S.FormBox>
 						{ formInfo.message && <S.FormInfo error={formInfo.error}> {formInfo.message} </S.FormInfo> }
-						<Button disabled={buttonIsDisabled} type="submit">Отправить</Button>
+						<Button disabled={buttonIsDisabled} type="submit">Send</Button>
 					</S.Form>
 					<S.Bottom as={'span'} mobile>
 						©2024 all rights reserved

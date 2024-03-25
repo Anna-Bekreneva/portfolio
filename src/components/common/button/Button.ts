@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import {adaptive, theme} from "../../../styles";
-export const Button = styled.button`
+import {theme} from "../../../styles";
+
+export const ButtonStyle = `
   color: ${theme.colors.white};
   padding: 12px 36px;
   background-color: ${theme.colors.orange500};
@@ -28,4 +29,7 @@ export const Button = styled.button`
   &:active {
     background-color: ${theme.colors.orange300};
   }
+`
+export const Button = styled.button`
+  ${ButtonStyle}
 `

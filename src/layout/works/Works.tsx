@@ -3,6 +3,7 @@ import {Button, Container, PictureProps, StyledTitle, Work} from "../../componen
 import {adaptiveValue, theme} from "../../styles";
 import {S} from './Works_Style'
 import {Link} from "react-scroll";
+import styled from "styled-components";
 
 type WorkType = {
     title: string
@@ -77,12 +78,41 @@ export const Works: FC = () => {
                         )
                     })}
                 </S.Items>
-                <Button as={'div'}>
-                    <Link to={'contacts'} smooth>
+                    <S.LinkScroll to={'contacts'} smooth>
                         Cooperate!
-                    </Link>
-                </Button>
+                    </S.LinkScroll>
             </Container>
         </S.Works>
     );
 };
+
+const StyledTest = styled(Link)`
+  //   color: ${theme.colors.white};
+  // padding: 12px 36px;
+  // background-color: ${theme.colors.orange500};
+  // border-radius: 2px 24px;
+  // position: relative;
+  // text-align: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // font-weight: 500;
+  // transition: border-radius 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+  // outline: 0;
+  // border: 1px solid transparent;
+  // cursor: pointer;
+  //
+  // &:focus-visible {
+  //   background-color: transparent;
+  //   color: ${theme.colors.orange500};
+  //   border-color: ${theme.colors.orange500};
+  // }
+  //
+  // &:hover {
+  //   border-radius: 6px;
+  // }
+  //
+  // &:active {
+  //   background-color: ${theme.colors.orange300};
+  // }
+`

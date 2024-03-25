@@ -44,7 +44,7 @@ export const Education = () => {
                     education
                 </StyledTitle>
                 </S.WrapperTitle>
-                <FlexWrapper gap={'28px'} justify={'space-between'}>
+                <FlexWrapper gap={'0'} justify={'space-between'}>
                     <Tilt tiltReverse={true}>
                         <StyledWrapperPictureWithDecor>
                             <StyledPictureWithDecor
