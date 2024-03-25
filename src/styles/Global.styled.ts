@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import {theme} from "./Theme";
-import {adaptive, adaptiveValue} from "./Common";
+import {adaptive} from "./Common";
 
 export function fontFace(fontFamily: string, url: string, weight: number ){
     return `
       @font-face{
           font-family: "${fontFamily}";
-        src: url('../assets/fonts/${url}.woff2') format("woff2"),
-        url('../assets/fonts/${url}.woff') format("woff");
+        src: url('${process.env.PUBLIC_URL}../assets/fonts/${url}.woff2') format("woff2"),
+        url('${process.env.PUBLIC_URL}../assets/fonts/${url}.woff') format("woff");
         font-weight: ${weight};
         font-display: swap;
         font-style: normal;
