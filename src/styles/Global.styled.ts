@@ -6,8 +6,8 @@ export function fontFace(fontFamily: string, url: string, weight: number ){
     return `
       @font-face{
           font-family: "${fontFamily}";
-        src: url('${process.env.PUBLIC_URL}../assets/fonts/${url}.woff2') format("woff2"),
-        url('${process.env.PUBLIC_URL}../assets/fonts/${url}.woff') format("woff");
+        src: url('${process.env.PUBLIC_URL}/assets/fonts/${url}.woff2') format("woff2"),
+        url('${process.env.PUBLIC_URL}/assets/fonts/${url}.woff') format("woff");
         font-weight: ${weight};
         font-display: swap;
         font-style: normal;
