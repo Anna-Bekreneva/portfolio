@@ -1,6 +1,6 @@
 import styled, {css} from "styled-components";
-import {adaptive, focusVisible, theme} from "../../styles";
-import {Button, FlexWrapper, IconWrapper, Section} from "../../components";
+import {adaptive, focusVisible, theme} from "styles";
+import {Button, FlexWrapper, IconWrapper, Section} from "components";
 
 const Contacts = styled(Section)`
 	${FlexWrapper} {

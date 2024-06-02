@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {focusVisible, theme} from "../../styles";
+import {focusVisible, theme} from "styles";
 
 const SocialItem = styled.li`
   width: 36px;

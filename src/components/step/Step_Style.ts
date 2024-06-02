@@ -1,6 +1,6 @@
 import {FlexWrapper, StyledTitle} from "../common";
 import styled from "styled-components";
-import {adaptive, theme} from "../../styles";
+import {adaptive, theme} from "styles";
 
 const Step = styled.article`
   ${FlexWrapper} {

@@ -1,4 +1,4 @@
-import {focusVisible, theme} from "../../styles";
+import {focusVisible, theme} from "styles";
 import styled from "styled-components";
 import {Link} from "react-scroll";
 

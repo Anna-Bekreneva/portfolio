@@ -1,46 +1,10 @@
-import {Container, FlexWrapper, MenuItem, SocialItem} from "../../components";
+import {Container, FlexWrapper, MenuItem, SocialItem} from "components";
 import {S} from './Header_Style'
 import {FC} from "react";
 import Headroom from "react-headroom";
-import {useHeader} from "../../hooks";
-export type HeaderPositionType = 'normal' | 'fixed' | 'hide'
+import {useHeader} from "hooks";
+import {menuItems, socialItems} from "./header-data";
 export const Header: FC = () => {
-
-    const menuItems: MenuItemsType[] = [
-        {
-            title: 'Skills',
-            to: 'skills',
-        },
-        {
-            title: 'Portfolio',
-            to: 'works',
-        },
-        {
-            title: 'Education',
-            to: 'education',
-        },
-        {
-            title: 'Contacts',
-            to: 'contacts',
-        }
-    ]
-    const socialItems: SocialItemsType[] = [
-        {
-            iconId: 'gitHubIcon',
-            ariaLabel: 'gitHub',
-            href: 'https://github.com/Anna-Bekreneva',
-        },
-        {
-            iconId: 'telegramIcon',
-            ariaLabel: 'Telegram',
-            href: 'https://t.me/anna_bekrenewa',
-        },
-        // {
-        //     iconId: 'linkedinIcon',
-        //     ariaLabel: 'Linkedin',
-        //     href: '#',
-        // }
-    ]
 
     const {menuWrapperRef, burgerButtonRef, mobileMenuIsOpen, setMobileMenuIsOpen} = useHeader()
 
@@ -69,15 +33,4 @@ export const Header: FC = () => {
             <Headroom> {header} </Headroom>
         </>
     )
-}
-
-type MenuItemsType = {
-    title: string,
-    to: string,
-}
-
-type SocialItemsType = {
-    iconId: string
-    ariaLabel: string
-    href: string
 }

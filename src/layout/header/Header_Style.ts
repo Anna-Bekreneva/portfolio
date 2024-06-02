@@ -1,6 +1,6 @@
-import {adaptive, theme} from "../../styles";
+import {adaptive, theme} from "styles";
 import styled, {css} from "styled-components";
-import {FlexWrapper} from "../../components";
+import {FlexWrapper} from "components";
 
 const Header = styled.header`
   background-color: ${theme.colors.orange50};

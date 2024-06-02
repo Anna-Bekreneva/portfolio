@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {adaptive, adaptiveValue, focusVisible, theme} from "../../styles";
+import {adaptive, adaptiveValue, focusVisible, theme} from "styles";
 import {IconWrapper, StyledPicture, StyledTitle} from "../common";
 
 const WrapperPicture = styled.div`

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {FlexWrapper, StyledTitle, StyledWrapperPictureWithDecor, Section} from "../../components";
-import {adaptive, adaptiveValue, theme} from "../../styles";
+import {FlexWrapper, StyledTitle, StyledWrapperPictureWithDecor, Section} from "components";
+import {adaptive, adaptiveValue, theme} from "styles";
 
 const WrapperTitle = styled(StyledTitle)`
   margin-bottom: ${adaptiveValue(48, 24)};

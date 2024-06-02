@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {adaptive, theme} from "../../../styles";
+import {adaptive, theme} from "styles";
 import {Picture} from "../picture";
 
 export const StyledWrapperPictureWithDecor = styled.div`

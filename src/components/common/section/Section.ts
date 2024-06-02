@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {adaptive, theme} from "../../../styles";
+import {adaptive, theme} from "styles";
 
 type Props = {
     backgroundColor?: string

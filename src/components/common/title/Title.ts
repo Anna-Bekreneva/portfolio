@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {adaptiveValue, theme} from "../../../styles";
+import {adaptiveValue, theme} from "styles";
 export const StyledTitle = styled.h2<StyledTitleProps>`
   font-size: ${props => props.fontSize || adaptiveValue(42, 28)};
   color: ${props => props.color || theme.colors.dark900};

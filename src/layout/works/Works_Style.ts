@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {Button, ButtonStyle, Section} from "../../components";
-import {adaptive, adaptiveValue, theme} from "../../styles";
+import {Button, ButtonStyle, Section} from "components";
+import {adaptive, adaptiveValue, theme} from "styles";
 import {Link} from "react-scroll";
 
 const Works = styled(Section)`
@@ -22,7 +22,7 @@ const Works = styled(Section)`
 
 const Items = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(393px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(398px, 1fr));
   column-gap: ${adaptiveValue(36, 20)};
   row-gap: ${adaptiveValue(56, 20)};
   margin-bottom: ${adaptiveValue(32, 26)};

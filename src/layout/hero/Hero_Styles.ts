@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {FlexWrapper, StyledTitle} from "../../components";
-import {adaptive, adaptiveValue, theme} from "../../styles";
+import {FlexWrapper, StyledTitle} from "components";
+import {adaptive, adaptiveValue, theme} from "styles";
 
 const Subtext = styled(StyledTitle)`
   line-height: 1.4;
